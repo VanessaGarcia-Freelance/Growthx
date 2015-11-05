@@ -64,7 +64,7 @@ wp-content/mysql.sql
 /wp-content/plugins/index.php
 
 # starter theme files that will be created locally
-/wp-content/themes/growthx/dist
+# /wp-content/themes/growthx/dist
 /wp-content/themes/growthx/bower_components
 /wp-content/themes/growthx/node_modules
 /wp-content/themes/growthx/npm-debug.log
