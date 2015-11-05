@@ -1,0 +1,26 @@
+
+.story {
+    header {
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        h1 {
+            // color: white;
+        }
+    }
+
+    .entry-content {
+        .gallery {
+            img {
+                width: 100%;
+            }
+        }
+
+        blockquote {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
