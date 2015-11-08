@@ -1,5 +1,33 @@
 header {
-    nav {
-        
+    position: relative;
+    width: 100%;
+    z-index: 100;
+
+    nav.navbar {
+        .navbar-toggle {
+            border-color: #ddd;
+            .icon-bar {
+                background-color: #888;
+            }
+        }
+
+        .navbar-nav {
+            li {
+                a {
+                    &:focus, &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
     }
+}
+
+
+@media screen and (min-width: 768px) { 
+    header {
+        position: absolute;
+    }
+
 }
