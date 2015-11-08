@@ -1,0 +1,16 @@
+.newsletter-signup {
+    .border {
+        & >div {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    h4 {
+        text-align: right;
+    }
+    form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

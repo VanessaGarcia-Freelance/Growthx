@@ -1,3 +1,4 @@
+<?php get_template_part('templates/content', 'newsletter'); ?>
 <footer>
     <div class="container">
         <div class="row">
