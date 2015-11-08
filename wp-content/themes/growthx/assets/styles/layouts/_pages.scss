@@ -21,4 +21,13 @@ body.home {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
+    .latest-founder-story {
+        color: $white;
+        height: 200px;
+
+        .story-entry {
+            height: 100%;
+        }
+    }
 }
