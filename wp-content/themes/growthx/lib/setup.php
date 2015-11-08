@@ -26,9 +26,14 @@ function setup() {
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
-  register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
-  ]);
+  // register_nav_menus([
+  //   'primary_navigation' => __('Primary Navigation', 'sage')
+  // ]);
+  register_nav_menus( array(
+    'primary_navigation' => __( 'Primary Navigation',      'sage' ),
+    'footer_navigation'  => __( 'Footer Menu', 'sage' ),
+    'social'  => __( 'Social Links Menu', 'sage' ),
+  ) );
 
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails

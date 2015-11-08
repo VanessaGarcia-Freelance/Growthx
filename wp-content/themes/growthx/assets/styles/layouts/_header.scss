@@ -10,17 +10,6 @@ header {
                 background-color: #888;
             }
         }
-
-        .navbar-nav {
-            li {
-                a {
-                    &:focus, &:hover {
-                        background-color: transparent;
-                    }
-                }
-            }
-        }
-
     }
 }
 

@@ -1,0 +1,36 @@
+footer {
+    .navmenu {
+        li {
+            a {
+                padding: 15px 5px;
+            }
+        }
+    }
+    .menu-social-menu-container {
+        clear: both;
+    }
+    .copyright {
+        padding: 15px 5px;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) { 
+    footer {
+        font-size: 13px;
+
+        .menu-social-menu-container {
+            float: left;
+            clear: none;
+        }
+        .copyright {
+            float: right;
+        } 
+        .navbar-right {
+            margin-right: 0;
+        }
+    }
+    
+
+}

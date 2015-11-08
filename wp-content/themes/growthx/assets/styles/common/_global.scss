@@ -7,3 +7,16 @@ a {
 a:focus, a:hover {
     color: $growthx-blue;
 }
+
+
+//  Menus
+
+nav.navmenu {
+    li {
+        a {
+            &:focus, &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
