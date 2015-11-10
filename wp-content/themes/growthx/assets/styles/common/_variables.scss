@@ -14,3 +14,26 @@ $growthx-grey:          #696969;
 $growthx-ltgrey:        #f2f3f1;
 $white:                 #ffffff;
 $black:                 #000000;
+
+
+@mixin accentblock($color) {
+    content: ' ';
+    display:block;
+    width: 40px;
+    height: 12px;
+    border-top: 6px solid rgba($color, 0.4);
+    background-color: rgba($color, 0.4);
+
+}
+
+
+
+//  (@color) {
+//     :before {
+//     content: '<div></div>';
+//     width: 50px;
+//     height: 5px;
+//     //border-top: 5px solid @color;
+//     background-color: rgba(@color, 0.5);
+//     }
+// }
