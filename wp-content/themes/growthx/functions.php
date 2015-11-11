@@ -25,3 +25,10 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+//using SVGs inside the media library
+function svg_mime_types( $mimes ){
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;}
+add_filter( 'upload_mimes', 'svg_mime_types' );
