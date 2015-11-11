@@ -26,6 +26,13 @@ $black:                 #000000;
 
 }
 
+@mixin fontRendering() {
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
 
 
 //  (@color) {
