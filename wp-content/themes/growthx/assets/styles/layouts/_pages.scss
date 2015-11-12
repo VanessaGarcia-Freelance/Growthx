@@ -17,7 +17,7 @@
 body.home {
     .lastest-blog-posts {
         margin-top: -3px;
-        padding-bottom: 40px;
+        // padding-bottom: 40px;
 
         .featured-post {
             border-bottom: 1px solid $growthx-grey;
@@ -45,10 +45,37 @@ body.home {
 
     .latest-founder-story {
         color: $white;
-        height: 200px;
+        height: 704px;
+
+        .founder-carousel {
+            height: 100%;
+        }
 
         .story-entry {
             height: 100%;
+        
+            .border {
+                display: table;
+                // width: 100%;
+
+                >div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                h2 {
+                    font-size: 65px;
+                    @include fontSemiBold();
+                }
+                h3{
+                    font-size: 39px;
+                }
+                .readmore {
+                    a {
+                        color: $growthx-ltgrey
+                    }
+                }
+            }
         }
+
     }
 }

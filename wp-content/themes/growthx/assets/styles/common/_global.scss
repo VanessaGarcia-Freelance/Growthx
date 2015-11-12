@@ -58,10 +58,12 @@ nav.navmenu {
 }
 
 //  Border Effect 
-.row.border { 
+.border { 
     padding: 10px;
+    height: 100%;
     
     & >div {
         border: 5px solid $growthx-ltgrey;
+        height: 100%;
     }
 }

@@ -12,6 +12,7 @@
   <?php get_template_part('templates/page', 'header'); ?>
 
 
+  <!-- LATEST BLOG POSTS -->
   <div class="lastest-blog-posts row">
     <div class="featured-post row col-sm-offset-1 col-sm-10">
       <?php
@@ -26,7 +27,6 @@
               echo '</div>';
           }
       ?>
-      <?php //get_template_part('templates/svg', 'logo'); ?>
     </div>
 
     <div class="post-carousel row col-sm-offset-1 col-sm-10">
@@ -45,30 +45,36 @@
   </div>
 
 
-
+  <!-- Latest Founder Stories --> 
   <div class="latest-founder-story row">
+    <div class="founder-carousel">
+
     <?php 
-      $args = array( 'post_type' => 'profile', 'numberposts' => '1' );
-      $recent_posts = wp_get_recent_posts( $args );
-      foreach( $recent_posts as $recent ){
-        $fieldArray = array( "user_id" => $recent["ID"] );
-        $headerText = types_render_field( "header-text", $fieldArray );
-        $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
+      $args = array( 'post_type' => 'profile', 'posts_per_page' => '1' );
+      //Define the loop based on arguments
+    $loop = new WP_Query( $args );
+     
+    //Display the contents 
+    while ( $loop->have_posts() ) : $loop->the_post();
+      $fieldArray = array( "user_id" => $recent["ID"] );
+      $headerText = types_render_field( "header-text", $fieldArray );
+      $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
+    ?>
 
-        ?>
-
-        <div class="story-entry container" style="background-image: url( <?php printf($headerImage);  ?> )">
-          <div class="row">
+    <div class="story-entry" style="background-image: url( <?php printf($headerImage);  ?> )">
+      <div class="col-sm-12 border">
+        <div> 
           <div class="col-sm-6 col-sm-offset-6">
-          <h1><?php printf($headerText);  ?></h1>
-          <p class="readmore"><a href="' . get_permalink($recent["ID"]) . '">Read the Founder Story</a></p>
-          </div>
+            <h2><?php the_title(); ?></h2>
+            <h3><?php printf($headerText);  ?></h3>
+            <p class="readmore"><a href="<?php the_permalink() ?>">Read the Founder Story</a></p>
           </div>
         </div>
+      </div>
+    </div>
 
-     <?php      
-      }
-    ?>
+  <?php endwhile;?>
+    </div>
   </div>
 
 
