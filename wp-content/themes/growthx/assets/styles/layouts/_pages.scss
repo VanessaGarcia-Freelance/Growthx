@@ -1,32 +1,5 @@
 .main {
     padding: 0;
-
-    .page-header {
-        margin: 0;
-
-        &.bgImg {
-            color: $white;
-        }
-
-        > div {
-            height: 100%;
-            display: table;
-        }
-        .heading-content {
-            display: table-cell;
-            vertical-align: middle;
-
-            h1 {
-                &:before {
-                   @include accentblock($white);
-                }
-            }
-            h2 {
-                font-weight: lighter;
-                font-size: 23px;
-            }
-        }
-    }
 }
 .heading-content {
     // @include accentblock($growthx-blue);
@@ -34,7 +7,7 @@
 
 .join-us {
     .page-header {
-        height: 285px;;
+        height: 285px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -42,24 +15,6 @@
 }
 
 body.home {
-    .home-headline {
-        height: 300px;
-        position: absolute;
-        width: 100%;
-        top:0px;
-        h1, h2 {
-            text-align: center;
-            color: $white;
-        }
-        h1 {
-            margin-top: 100px;
-        }
-        button {
-            margin: 0 auto;
-            display: block;
-        }
-    }
-
     .lastest-blog-post {
         padding-top: 40px;
         padding-bottom: 40px;

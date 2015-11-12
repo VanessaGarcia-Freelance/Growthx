@@ -10,6 +10,37 @@ header {
                 background-color: #888;
             }
         }
+        .navbar-brand {
+            svg {
+                fill: $growthx-blue;
+                width: 32px;
+                height: auto;
+            }
+            img{
+                width: 32px;
+                height: auto;
+            }
+        }
+
+        li {
+            a {
+                color: $white;
+                opacity: 0.5;
+                text-transform: uppercase;
+                font-size: 9px;
+                padding: 15px;
+                @include fontSemiBold();
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &.current-menu-item a {
+                opacity: 1;
+            }
+        }
+        
     }
 }
 
@@ -24,10 +55,13 @@ header {
         }
 
         nav.navbar {
+            margin-top: 10px;
             .container {
-                padding-left: 0; 
-                padding-right: 0;
-                
+                // padding-left: 0; 
+                // padding-right: 0;
+                .navbar-header {
+                    margin-left: 10px;
+                }
                 .navbar-brand {
                     margin-left: 0;
                 } 

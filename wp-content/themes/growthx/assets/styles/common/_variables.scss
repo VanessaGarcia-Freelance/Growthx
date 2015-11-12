@@ -8,7 +8,7 @@ $sidebar-sm-columns:    4;
 // Colors
 $brand-primary:         #27ae60;
 
-$growthx-blue:          #2a56dd;
+$growthx-blue:          #132bee; //#2a56dd;
 $growthx-green:         #44b1a1;
 $growthx-grey:          #696969;
 $growthx-ltgrey:        #f2f3f1;
@@ -27,10 +27,29 @@ $black:                 #000000;
 }
 
 @mixin fontRendering() {
-    font-weight: normal;
-    font-style: normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+}
+
+@mixin growthxIcon() {
+    display: block;
+    // &:before {
+    //     //content: url("data:image/svg+xml; utf8, <svg.. code here</svg>");
+    //     content: url('http://localhost:8888/GrowthX/wp-content/uploads/2015/11/growthx-logo.svg');
+    // }
+}
+
+@mixin fontSemiBold() {
+    font-family: "HarmoniaSansPro-SemiBd", Arial, Helvetica, sans-serif;
+    @include fontRendering();
+}
+@mixin fontRegular() {
+    font-family: "HarmoniaSansPro-Regular", Arial, Helvetica, sans-serif;
+    @include fontRendering();
+}
+@mixin fontLight() {
+    font-family: "HarmoniaSansPro-Light", Arial, Helvetica, sans-serif;
+    @include fontRendering();
 }
 
 

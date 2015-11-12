@@ -1,12 +1,12 @@
 body {
-    font-family: "HarmoniaSansPro-Light", Arial, Helvetica, sans-serif;
+    @include fontLight();
     font-size: 11px;
 }
 h1, h3, h4 {
-    font-family: "HarmoniaSansPro-SemiBd", Arial, Helvetica, sans-serif;
+    @include fontSemiBold();
 }
 h2, blockquote {
-    font-family: "HarmoniaSansPro-Regular", Arial, Helvetica, sans-serif;
+    @include fontRegular();
 }
 h1 {
     font-size: 39px;
@@ -25,6 +25,10 @@ a {
 
 a:focus, a:hover {
     color: $growthx-blue;
+}
+
+.growthx-icon {
+    //@include growthxIcon();
 }
 
 

@@ -14,18 +14,25 @@
   }
 
   //page link exists, grab the values for the link
-  if($pageLink == "1") {
-    $pageLinkText = types_render_field( "header-link-text", array( ) );
-    $pageLinkUrl = types_render_field("header-link-url", array("output" => "raw" ));
-  }
+  
 ?>
 
-<div class="page-header row <?php echo $bgimg; ?>" style="background-image: url(<?php printf($pageHeaderImage); ?>)">
+<div class="page-header row border <?php echo $bgimg; ?>" style="background-image: url(<?php printf($pageHeaderImage); ?>)">
   <!-- <h1><?= Titles\title(); ?></h1> -->
-  <div class="col-sm-8 col-sm-offset-1">
+  <div>
     <div class="heading-content">
       <h1><?php print_r($pageHeadline); ?></h1>
       <h2><?php print_r($pageSubheading); ?></h2>
+      <?php 
+        if($pageLink == "1") {
+          $pageLinkText = types_render_field( "header-link-text", array( ) );
+          $pageLinkUrl = types_render_field("header-link-url", array("output" => "raw" ));
+
+          echo "<div class='border-btn'><a href='".$pageLinkUrl."'>";
+          echo $pageLinkText;
+          echo "</a></div>";
+        }
+      ?>
     </div>
   </div>
 </div>
