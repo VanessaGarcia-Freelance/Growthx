@@ -2,7 +2,14 @@ footer {
     .navmenu {
         li {
             a {
-                padding: 15px 5px;
+                padding: 15px 10px;
+                @include fontSemiBold();
+                font-size: 9px;
+
+                &:hover {
+                    color: $black;
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -12,6 +19,20 @@ footer {
     .copyright {
         padding: 15px 5px;
     }
+    .navbar-brand{
+        height: auto;
+        padding: 0;
+        float: none;
+        text-align: center;
+        display: block;
+        margin-top: -10px;
+
+        svg {
+            width: 51px;
+            fill: $growthx-blue;
+        }
+    }
+    
 
 }
 

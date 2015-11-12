@@ -12,7 +12,7 @@
                 </nav>
             </div>
             <div class="col-sm-2">
-                <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+                <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php get_template_part('templates/svg', 'logo'); ?></a>
             </div>
             <div class="col-sm-5">
                 <nav class="navmenu navbar-right">

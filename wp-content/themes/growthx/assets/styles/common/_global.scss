@@ -21,6 +21,7 @@ h2 {
 // will change this to white once content is placed underneath it
 a {
     color: $black;
+    text-transform: uppercase;
 }
 
 a:focus, a:hover {

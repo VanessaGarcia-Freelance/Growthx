@@ -10,13 +10,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
-
-        <?php
-          //echo file_get_contents( get_template_directory() . "/assets/images/growthx-logo.svg"); ?>
-
         <?php get_template_part('templates/svg', 'logo'); ?>
-
-        <!-- <img src = "<?php $upload_dir = wp_upload_dir(); //echo $upload_dir['baseurl']; ?>/2015/11/growthx-logo.svg" alt="<?php bloginfo('name'); ?>" /> -->
        </a>
       </div>
 
