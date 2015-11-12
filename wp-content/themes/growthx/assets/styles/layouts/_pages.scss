@@ -15,9 +15,32 @@
 }
 
 body.home {
-    .lastest-blog-post {
-        padding-top: 40px;
+    .lastest-blog-posts {
+        margin-top: -3px;
         padding-bottom: 40px;
+
+        .featured-post {
+            border-bottom: 1px solid $growthx-grey;
+            background: url(../images/growthx-logo.svg) no-repeat 100% center;
+            background-size: contain;
+            padding-left: 0;
+
+            > div {
+                padding: 80px 0;
+            }
+
+            h2 {
+                font-size: 46px;
+                line-height: 55px;
+            }
+        }
+        .post-carousel {
+            padding: 80px 0;
+            h2 {
+                font-size: 32px;
+                line-height: 43px;
+            }
+        }
     }
 
     .latest-founder-story {

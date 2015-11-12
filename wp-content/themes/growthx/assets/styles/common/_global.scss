@@ -5,7 +5,7 @@ body {
 h1, h3, h4 {
     @include fontSemiBold();
 }
-h2, blockquote {
+h2, blockquote, a {
     @include fontRegular();
 }
 h1 {
@@ -25,11 +25,24 @@ a {
 
 a:focus, a:hover {
     color: $growthx-blue;
+    text-decoration: none;
 }
 
 .growthx-icon {
     //@include growthxIcon();
 }
+
+.readmore {
+    a {
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $growthx-grey;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 
 
 
