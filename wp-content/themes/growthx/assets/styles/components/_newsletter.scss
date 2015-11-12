@@ -1,13 +1,17 @@
 .newsletter-signup {
     .border {
         & >div {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
     }
 
     h4 {
         text-align: right;
+        text-transform: uppercase;
+        @include fontRegular();
+        font-size: 22px;   
+
     }
     form {
         margin-top: 10px;

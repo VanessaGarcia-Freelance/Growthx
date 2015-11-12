@@ -46,8 +46,8 @@
 
 
   <!-- Latest Founder Stories --> 
-  <div class="latest-founder-story row">
-    <div class="founder-carousel">
+  <div class="latest-founder-story container">
+    <div class="founder-carousel row">
 
     <?php 
       $args = array( 'post_type' => 'profile', 'posts_per_page' => '1' );
