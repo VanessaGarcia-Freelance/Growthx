@@ -170,3 +170,89 @@ body.home {
     }
 }
 
+
+body.blog {
+    .page-header {
+        // background-color: $growthx-dkgrey;
+        display: none;
+    }
+
+    article:first-child{
+        @include make-sm-column(12);
+    }
+    article {
+
+    }
+}
+
+body.contact {
+    .page-header {
+        height: 300px;
+        background-size: cover;
+        >div {
+            border: none;
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .locations {
+        border-top: 2px solid $growthx-dkgrey;
+        border-bottom: 2px solid $growthx-dkgrey;
+
+        .row {
+            .address {
+                padding: 5% 0;
+
+                h2 {
+                    @include fontSemiBold();
+                    font-size: 39px;
+
+                    &:before {
+                        @include accentblock($growthx-dkgrey);
+                        margin-bottom: 10px;
+                    }
+                    
+                }
+                h3 {
+                    @include fontRegular();
+                    font-size: 21px;
+                    margin-top: 0;
+                }
+            }
+        }
+        .row:nth-child(even){
+            .address {
+                float: right;
+            }
+            .map {
+                float: left;
+                padding-right: 0;
+            }
+        }
+        .row:nth-child(odd){
+            .map {
+                padding-left:  0;
+                
+            }
+        }
+    }
+
+    .join {
+        div {
+            text-align: center;
+            padding: 40px 0;
+
+            h3 {
+                @include fontRegular();
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            button {
+                width: 160px;
+            }
+        }
+    }
+}

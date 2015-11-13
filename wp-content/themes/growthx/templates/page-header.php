@@ -21,6 +21,7 @@
   <!-- <h1><?= Titles\title(); ?></h1> -->
   <div>
     <div class="heading-content">
+    <!-- <h1><?php //echo get_the_ID(); ?> </h1> -->
       <h1><?php print_r($pageHeadline); ?></h1>
       <h2><?php print_r($pageSubheading); ?></h2>
       <?php 
