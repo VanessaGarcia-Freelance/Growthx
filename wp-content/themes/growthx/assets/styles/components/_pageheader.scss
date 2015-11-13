@@ -24,14 +24,19 @@
             font-weight: lighter;
             font-size: 23px;
         }
-        .border-btn a{
-            padding: 10px;
-            border: 2px solid $white;
-            @include fontSemiBold();
-            text-transform: uppercase;
-            font-size: 9px;
-            color: $white;
+        .border-btn {
             text-align: center;
+
+            a{
+                padding: 10px;
+                border: 2px solid $white;
+                @include fontSemiBold();
+                text-transform: uppercase;
+                font-size: 9px;
+                color: $white;
+                text-align: center;
+                display: inline-block;
+            }
         }
     }
 }
