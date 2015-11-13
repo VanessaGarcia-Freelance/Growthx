@@ -7,11 +7,101 @@
 
 .join-us {
     .page-header {
-        height: 285px;
+        height: 383px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+
+        > div {
+            border: none;
+
+            h1 {
+                margin-bottom: 0;
+            }
+            h2{
+                margin: 0;
+            }
+        }
     }
+
+    .join-box {
+        margin: 0;
+        background-size: contain;
+        padding: 50px 0;
+
+        &.bgImg {
+            color: $white;
+            @include textShadow();
+        }
+
+        .heading-content {
+            width: 100%;
+
+
+            @include make-sm-column(6);
+            @include make-sm-column-offset(1);
+
+            h2 {
+                font-size: 39px;
+                @include fontSemiBold();
+                margin-bottom: 0;
+                &:before {
+                   @include accentblock($black);
+                   margin-bottom: 10px;
+                }
+            }
+            h3 {
+                @include fontRegular();
+                font-weight: lighter;
+                font-size: 23px;
+                margin-top: 0;
+            }
+            .border-btn {
+                text-align: center;
+
+                a{
+                    padding: 10px;
+                    border: 2px solid $white;
+                    @include fontSemiBold();
+                    text-transform: uppercase;
+                    font-size: 9px;
+                    color: $white;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .button {
+            @include make-sm-column(4);
+            // @include make-sm-column-offset();
+            button {
+                margin-top: 50px;
+                float: right;
+                width: 162px;
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .contact {
+        text-align: center;
+        padding: 50px 0;
+
+        h2 {
+            font-size: 23px;
+        }
+        .button {
+            button {
+                width: 162px;
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    
 }
 
 body.home {
@@ -79,3 +169,4 @@ body.home {
 
     }
 }
+

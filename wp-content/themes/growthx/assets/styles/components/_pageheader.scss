@@ -19,6 +19,7 @@
         h1 {
             &:before {
                @include accentblock($white);
+               margin-bottom: 10px;
             }
         }
         h2 {

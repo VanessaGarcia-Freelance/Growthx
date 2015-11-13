@@ -38,6 +38,15 @@ button {
     background-color: $growthx-ltgrey;
     border: none;
     padding: 7px 20px;
+
+    &.outline {
+        background-color: transparent;
+        border: 2px solid $growthx-dkgrey;
+    }
+}
+
+hr {
+    border-top: 2px solid $growthx-dkgrey;
 }
 
 
