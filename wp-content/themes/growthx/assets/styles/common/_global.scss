@@ -94,3 +94,31 @@ nav.navmenu {
         height: 100%;
     }
 }
+
+// Block Quotes
+blockquote {
+    border: none;
+    font-size: 23px;
+    line-height: 31px;
+    &.1{
+
+    }
+    //pulled to the left
+    &.right {
+        @include make-sm-column(4);
+        @include make-sm-column-offset(1);
+        &:after {
+            @include accentBlockSide($growthx-green);
+        }
+        text-align: right;
+        
+    }
+    //pulled to the right
+    &.left{
+        @include make-sm-column(6);
+        @include make-sm-column-offset(6);
+        &:before {
+            @include accentBlockSide($growthx-blue);
+        }
+    }
+}

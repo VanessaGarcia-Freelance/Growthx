@@ -1,25 +1,78 @@
+body.single-profile {
+    .story {
+        header {
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: table;
+            z-index: 1;
 
-.story {
-    header {
-        height: 300px;
-        background-repeat: no-repeat;
-        background-size: cover;
+            > div {
+                display: table-cell;
+                vertical-align: middle;
 
-        h1 {
-            // color: white;
+                h1 {
+                    color: $white;
+                    &:before {
+                        @include accentblock($white);
+                        margin-bottom: 10px;
+                    }
+                    @include textShadow();
+                    
+                }
+            } 
         }
-    }
 
-    .entry-content {
-        .gallery {
-            img {
-                width: 100%;
+        .entry-content {
+            p {
+                //@include make-lg-column(6);
+                clear: both;
+                float: none;
+                width: 60%;
+                margin: 20px auto;
+                line-height: 23px;
             }
-        }
 
-        blockquote {
-            img {
-                width: 100%;
+            .gallery-container {
+                height: 702px;
+                overflow: hidden;
+                .slide {
+                    height: 702px;
+                    background-size: contain;
+
+                    > div {
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba($growthx-dkgrey, .8);
+
+                        .caption-container {
+                            display: table;
+                            width: 100%;
+
+                            .caption {
+                                display: table-cell;
+                                vertical-align: middle;
+                                color: $white;
+                                text-align: center;
+
+                                h4 {
+                                    width: 55%; 
+                                    margin: 0 auto;
+                                    font-size: 40px;
+                                    line-height: 52px;
+                                    text-align: left;
+                                    @include textShadow();
+                                }
+                            }
+                        }
+                    }
+                }  
+            }
+
+            blockquote {
+                img {
+                    width: 100%;
+                }
             }
         }
     }

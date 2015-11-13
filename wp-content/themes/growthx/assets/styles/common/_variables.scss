@@ -9,9 +9,10 @@ $sidebar-sm-columns:    4;
 $brand-primary:         #27ae60;
 
 $growthx-blue:          #132bee; //#2a56dd;
-$growthx-green:         #44b1a1;
+$growthx-green:         #4ed4c1;
 $growthx-grey:          #8c8c8c; //readmore color
 $growthx-ltgrey:        #f2f3f1;
+$growthx-dkgrey:        #2d2d2d;
 $white:                 #ffffff;
 $black:                 #000000;
 
@@ -25,6 +26,22 @@ $black:                 #000000;
     background-color: rgba($color, 0.4);
 }
 
+@mixin accentBlockSide($color) {
+        content: ' ';
+        display:inline-block;
+        width: 12px;
+        height: 40px;
+        border-left: 6px solid rgba($color, 0.4);
+        background-color: rgba($color, 0.4);
+        vertical-align: middle;
+        margin: 0 10px;
+}
+
+
+@mixin textShadow () {
+    text-shadow: 0 1px 1px rgba($black,0.5);
+}
+
 @mixin fontRendering() {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -32,10 +49,6 @@ $black:                 #000000;
 
 @mixin growthxIcon() {
     display: block;
-    // &:before {
-    //     //content: url("data:image/svg+xml; utf8, <svg.. code here</svg>");
-    //     content: url('http://localhost:8888/GrowthX/wp-content/uploads/2015/11/growthx-logo.svg');
-    // }
 }
 
 @mixin fontSemiBold() {
