@@ -1,4 +1,4 @@
-<div class="membergrid row">
+<div class="membergrid">
   <?php 
  
   //Define your custom post type name in the arguments

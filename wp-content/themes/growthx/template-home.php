@@ -46,7 +46,7 @@
 
 
   <!-- Latest Founder Stories --> 
-  <div class="latest-founder-story container">
+  <div class="latest-founder-story container-fluid">
     <div class="founder-carousel row">
 
     <?php 

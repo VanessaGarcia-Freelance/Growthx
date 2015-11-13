@@ -5,7 +5,7 @@
     // @include accentblock($growthx-blue);
 }
 
-.join-us {
+body.join {
     .page-header {
         height: 383px;
         background-size: cover;
@@ -177,12 +177,22 @@ body.blog {
         display: none;
     }
 
-    article:first-child{
-        @include make-sm-column(12);
+    .main {
+        //background-color: grey;
+        article{
+            &:first-child {
+                //@include make-sm-column(12);
+                //background-color: crimson;
+            }
+            &:nth-child(5n+3), 
+            &:nth-child(5n+4), 
+            &:nth-child(5n+5) {
+                //background-color: green;
+                @include make-sm-column(4);
+            }
+        }
     }
-    article {
-
-    }
+    
 }
 
 body.contact {

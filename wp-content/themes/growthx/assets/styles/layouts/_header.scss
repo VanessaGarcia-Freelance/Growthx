@@ -54,14 +54,14 @@ body {
         > header {
             position: absolute;
 
-            & > .container {
+            & > .container-fluid {
                 padding-left: 0; 
                 padding-right: 0;
             }
 
             nav.navbar {
                 margin-top: 10px;
-                .container {
+                .container-fluid {
                     // padding-left: 0; 
                     // padding-right: 0;
                     .navbar-header {
