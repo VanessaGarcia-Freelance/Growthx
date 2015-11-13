@@ -1,6 +1,6 @@
 <?php get_template_part('templates/content', 'newsletter'); ?>
 <footer>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-5">
                 <nav class="navmenu">

@@ -27,7 +27,7 @@
                 <p>(543) 342-1212</p>
             </div>
         </div>
-        <div class="col-sm-6 map"><img src="http://localhost:8888/GrowthX/wp-content/uploads/2015/11/Map01.jpg" width="100%" /></div>
+        <div class="col-sm-6 map"><img src="http://growthx.hyperionmedia.us/wp-content/uploads/2015/11/Map01.jpg" width="100%" /></div>
     </div>
     <div class="row">
         <div class="col-sm-6 address">
@@ -38,7 +38,7 @@
                 <p>(543) 342-1212</p>
             </div>
         </div>
-        <div class="col-sm-6 map"><img src="http://localhost:8888/GrowthX/wp-content/uploads/2015/11/Map02.jpg" width="100%" /></div>
+        <div class="col-sm-6 map"><img src="http://growthx.hyperionmedia.us/wp-content/uploads/2015/11/Map02.jpg" width="100%" /></div>
     </div>
   </div>
 
