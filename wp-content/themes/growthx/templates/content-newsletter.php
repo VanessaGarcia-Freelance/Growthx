@@ -7,7 +7,7 @@
       <div class="col-sm-6">
         <form>
           <input type="text" value="Email" />
-          <input type="submit"/>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
     </div>

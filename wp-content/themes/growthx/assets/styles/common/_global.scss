@@ -2,7 +2,7 @@ body {
     @include fontLight();
     font-size: 11px;
 }
-h1, h3, h4 {
+h1, h3, h4, input, button {
     @include fontSemiBold();
 }
 h2, blockquote, a {
@@ -19,7 +19,7 @@ h2 {
 
 
 // will change this to white once content is placed underneath it
-a {
+a, button {
     color: $black;
     text-transform: uppercase;
 }
@@ -28,6 +28,18 @@ a:focus, a:hover {
     color: $growthx-blue;
     text-decoration: none;
 }
+
+input, button{
+    text-transform: uppercase;
+    font-size: 9px;
+    padding: 5px;
+}
+button {
+    background-color: $growthx-ltgrey;
+    border: none;
+    padding: 7px 20px;
+}
+
 
 .growthx-icon {
     //@include growthxIcon();
@@ -38,8 +50,22 @@ a:focus, a:hover {
         text-transform: uppercase;
         font-size: 18px;
         color: $growthx-grey;
+        &:after {
+             background: url(../images/right-arrow-grey.png) no-repeat;
+            background-size: 10px;
+            width: 10px; 
+            height: 15px;
+            content: " ";
+            display: inline-block;
+            position: relative;
+            top: 1px;
+            left: 5px;
+        }
         &:hover {
-            text-decoration: underline;
+            // text-decoration: underline;
+            &:after {
+                left: 12px;
+            }
         }
     }
 }
