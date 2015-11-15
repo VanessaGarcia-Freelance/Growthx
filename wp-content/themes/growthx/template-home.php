@@ -13,8 +13,8 @@
 
 
   <!-- LATEST BLOG POSTS -->
-  <div class="lastest-blog-posts row">
-    <div class="featured-post row col-sm-offset-1 col-sm-10">
+  <div class="lastest-blog-posts container-fluid">
+    <div class="featured-post col-sm-offset-1 col-sm-10">
       <?php
           $args = array( 'numberposts' => '1', 'orderby' => 'post_date',
     'order' => 'ASC' );
@@ -29,7 +29,7 @@
       ?>
     </div>
 
-    <div class="post-carousel row col-sm-offset-1 col-sm-10">
+    <div class="post-carousel col-sm-offset-1 col-sm-10">
       <?php
           $args = array( 'numberposts' => '3' );
           $recent_posts = wp_get_recent_posts( $args );
@@ -50,7 +50,7 @@
     <div class="founder-carousel row">
 
     <?php 
-      $args = array( 'post_type' => 'profile', 'posts_per_page' => '1' );
+      $args = array( 'post_type' => 'gcompany', 'posts_per_page' => '1' );
       //Define the loop based on arguments
     $loop = new WP_Query( $args );
      

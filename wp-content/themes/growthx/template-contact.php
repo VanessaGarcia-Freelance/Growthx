@@ -57,6 +57,17 @@
     </div>
   </div>
 
+  <div class="modal">
+    <div class="overlay">
+      <div class="container">
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="form">
+        <?php get_template_part('templates/form', 'companies'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 

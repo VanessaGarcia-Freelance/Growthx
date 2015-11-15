@@ -6,20 +6,26 @@
         }
     }
 
-    h4 {
-        text-align: right;
-        text-transform: uppercase;
-        @include fontRegular();
-        font-size: 22px;  
-        line-height: 31px; 
+    .form {
+        form {
+            margin-top: 10px;
+            margin-bottom: 10px;
 
-    }
-    form {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        
-        input {
-            width: 50%;
+            h4 {
+                text-align: right;
+                text-transform: uppercase;
+                @include fontRegular();
+                font-size: 22px;  
+                line-height: 11px;
+
+            }
+            
+            input {
+                width: 50%;
+                float: left;
+                margin-right: 10px;
+            }
         }
     }
+    
 }

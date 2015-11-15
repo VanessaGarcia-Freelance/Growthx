@@ -19,6 +19,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        console.log('common');
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -37,6 +38,32 @@
     'about_us': {
       init: function() {
         // JavaScript to be fired on the about us page
+      }
+    },
+    'join': {
+      init: function() {
+
+      },
+      finalize: function() {
+        console.log('join page');
+        //alert('styles = '+directory_uri.stylesheet_directory_uri );
+
+        function openForm (form){
+          console.log( 'form:', form );
+          console.log( 'uri:', stylesheet_directory_uri );
+          var frame = "<div class='modal-outer'>";
+          frame += "<div class='modal-container'>";
+          frame += "<div class='close'>Close</div>";
+          frame += "<iframe src='"+stylesheet_directory_uri+form+"'></iframe>";
+          frame += "</div></div>";
+
+          $('.main').append(frame);
+
+        }
+        
+        // $('button.company').on('click', function(){
+        //     openForm("/forms/growthx_companies.html");
+        // });
       }
     }
   };

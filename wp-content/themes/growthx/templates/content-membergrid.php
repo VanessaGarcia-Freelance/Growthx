@@ -2,7 +2,7 @@
   <?php 
  
   //Define your custom post type name in the arguments
-  $args = array('post_type' => 'profile');
+  $args = array('post_type' => 'gcompany');
    
   //Define the loop based on arguments
   $loop = new WP_Query( $args );
