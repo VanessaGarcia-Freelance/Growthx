@@ -5,6 +5,7 @@
 
   $pageHeadline = types_render_field( "page-headline", array( ) );
   $pageSubheading = types_render_field( "page-subheading", array( ) );
+  $pageHeaderContent = types_render_field( "header-content", array( ) );
   $pageHeaderImage = types_render_field("page-header-image", array( "output" => "raw" ));
   $pageLink = types_render_field("header-include-link", array());
 
@@ -24,6 +25,7 @@
     <!-- <h1><?php //echo get_the_ID(); ?> </h1> -->
       <h1><?php print_r($pageHeadline); ?></h1>
       <h2><?php print_r($pageSubheading); ?></h2>
+      <p><?php print_r($pageHeaderContent); ?></p>
       <?php 
         if($pageLink == "1") {
           $pageLinkText = types_render_field( "header-link-text", array( ) );

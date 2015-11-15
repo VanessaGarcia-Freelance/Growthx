@@ -83,4 +83,29 @@
     }
 }
 
+.community {
+    .menu-primary-container {
+        a {
+            color: $growthx-dkgrey;
+        }
+    }
+    .page-header {
+        padding: 100px 0;
+        border-bottom: 2px solid $growthx-dkgrey;
+
+        > div {
+            border: none;
+            @include make-sm-column(4);
+            @include make-sm-column-offset(4);
+        }
+
+        h1{
+            &:before {
+                @include accentblock($growthx-dkgrey);
+            }
+
+        }
+    }
+}
+
 
