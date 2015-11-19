@@ -104,8 +104,7 @@ body.join {
             }
         }
     }
-
-    
+ 
 }
 
 body.home {
@@ -271,13 +270,14 @@ body.contact {
                 font-size: 24px;
                 margin-bottom: 20px;
             }
-            button {
-                width: 160px;
+            // button {
+            //     width: 160px;
 
                 a {
                     @include fontSemiBold();
+                    @include buttonOutline();
                 }
-            }
+            // }
         }
     }
 }

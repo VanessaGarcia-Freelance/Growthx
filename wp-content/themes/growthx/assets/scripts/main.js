@@ -71,33 +71,6 @@
     'contact': {
       init: function() {
 
-      },
-      finalize: function() {
-        console.log('join page');
-
-        $("form button" ).wrap( "<div class='button'></div>" );
-
-        $('button.company').on('click', function () {
-          toggleForm('.modal-company');
-        });
-        $('button.investor').on('click', function () {
-          toggleForm('.modal-investor');
-        });
-
-        function toggleForm(currentModal) {
-          $(currentModal).show();
-          $('.overlay').show();
-          $('.close', currentModal).one('click', function (){
-            $(currentModal).hide();
-            $('.overlay').hide();
-            $('.close', currentModal);
-          });
-          $('.overlay').one('click', function (){
-            $(currentModal).hide();
-            $('.overlay').hide();
-            $('.close', currentModal);
-          });
-        }
       }
     }
   };

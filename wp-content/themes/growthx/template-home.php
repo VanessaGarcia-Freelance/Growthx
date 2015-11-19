@@ -50,7 +50,7 @@
     <div class="founder-carousel row">
 
     <?php 
-      $args = array( 'post_type' => 'gcompany', 'posts_per_page' => '1' );
+      $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => '1' );
       //Define the loop based on arguments
     $loop = new WP_Query( $args );
      
