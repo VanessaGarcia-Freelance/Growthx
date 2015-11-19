@@ -46,24 +46,58 @@
       },
       finalize: function() {
         console.log('join page');
-        //alert('styles = '+directory_uri.stylesheet_directory_uri );
 
-        function openForm (form){
-          console.log( 'form:', form );
-          console.log( 'uri:', stylesheet_directory_uri );
-          var frame = "<div class='modal-outer'>";
-          frame += "<div class='modal-container'>";
-          frame += "<div class='close'>Close</div>";
-          frame += "<iframe src='"+stylesheet_directory_uri+form+"'></iframe>";
-          frame += "</div></div>";
+        $("form button" ).wrap( "<div class='button'></div>" );
 
-          $('.main').append(frame);
+        $('button.company').on('click', function () {
+          toggleForm('.modal-company');
+        });
+        $('button.investor').on('click', function () {
+          toggleForm('.modal-investor');
+        });
 
+
+        function toggleForm(currentModal) {
+          console.log( 'currentModal:', currentModal  );
+          $(currentModal).show();
+          $('.overlay').show();
+          $('.close', currentModal).on('click', function (){
+            $(currentModal).hide();
+            $('.overlay').hide();
+          });
         }
-        
-        // $('button.company').on('click', function(){
-        //     openForm("/forms/growthx_companies.html");
-        // });
+      }
+    },
+    'contact': {
+      init: function() {
+
+      },
+      finalize: function() {
+        console.log('join page');
+
+        $("form button" ).wrap( "<div class='button'></div>" );
+
+        $('button.company').on('click', function () {
+          toggleForm('.modal-company');
+        });
+        $('button.investor').on('click', function () {
+          toggleForm('.modal-investor');
+        });
+
+        function toggleForm(currentModal) {
+          $(currentModal).show();
+          $('.overlay').show();
+          $('.close', currentModal).one('click', function (){
+            $(currentModal).hide();
+            $('.overlay').hide();
+            $('.close', currentModal);
+          });
+          $('.overlay').one('click', function (){
+            $(currentModal).hide();
+            $('.overlay').hide();
+            $('.close', currentModal);
+          });
+        }
       }
     }
   };

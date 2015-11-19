@@ -6,26 +6,50 @@
         }
     }
 
-    .form {
-        form {
-            margin-top: 10px;
-            margin-bottom: 10px;
+    h4 {
+        text-align: right;
+        text-transform: uppercase;
+        @include fontRegular();
+        font-size: 22px;  
+        line-height: 11px;
 
-            h4 {
-                text-align: right;
-                text-transform: uppercase;
-                @include fontRegular();
-                font-size: 22px;  
-                line-height: 11px;
+    }
 
-            }
+    form {
+        // margin-top: 10px;
+        // margin-bottom: 10px;
+        padding: 0;
+        
+        input {
             
-            input {
+            float: left;
+
+            &:first-child {
                 width: 50%;
-                float: left;
                 margin-right: 10px;
             }
         }
+
+        .form-field-description{
+            display: none;
+        }
+
+        button, .btn-primary, .comment-form input[type=submit] {
+            background-color: $growthx-ltgrey;
+            border: none;
+            padding: 7px 20px;
+            border-radius: 0;
+            color: $black;
+            font-size: 9px;
+            width: auto;
+            min-height: auto;
+
+            &:active:hover {
+                background-color: $growthx-ltgrey;
+            }
+        }
+
+
     }
     
 }

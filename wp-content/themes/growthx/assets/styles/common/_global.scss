@@ -34,7 +34,7 @@ input, button{
     font-size: 9px;
     padding: 5px;
 }
-button {
+button, .btn-primary, .comment-form input[type=submit] {
     background-color: $growthx-ltgrey;
     border: none;
     padding: 7px 20px;
@@ -42,6 +42,9 @@ button {
     &.outline {
         background-color: transparent;
         border: 2px solid $growthx-dkgrey;
+    }
+    &:hover {
+
     }
     a {
         &:hover{
@@ -139,12 +142,117 @@ blockquote {
 
 .modal {
     display: block;
+    @include make-sm-column(6);
+    @include make-sm-column-offset(3);
+    position: absolute;
+    top: 450px;
+    bottom: auto;
 
-    .overlay {
-        width: 100%;
-        height: 100%;
-        background-color: rgba($growthx-dkgrey, 0.5);
+    .close {
+        margin-top: -10px;
+        color: white;
+        opacity: 1;
+        font-size: 9px;
+        text-transform: uppercase;
+        text-shadow: none;
+    }
 
-        
+    .modal-container {
+        background-color: $white;
+        display: block;
+        margin-top: 20px;
+
+        &.container-fluid{
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .modal-header {
+            background-color: $growthx-ltgrey;
+            text-align: center;
+            font-size: 32px;
+            border-bottom: 0;
+        }
+
+        .button{
+            @include make-sm-column(12);
+            clear: both;
+            display: block;
+            background-color: $growthx-ltgrey;
+            padding: 40px;
+            text-align: center;
+            margin-top: 30px;
+
+            button.btn-primary {
+                background-color: white;
+                border: 2px solid $growthx-dkgrey; 
+                border-radius: 0;
+                width: 160px;
+                color: $black;
+                font-size: 9px;
+                display: inline-block;
+
+                &:hover, &:focus, &:active {
+                    background-color: white;
+                    color: $black;
+                    border: 2px solid $growthx-dkgrey; 
+                } 
+            }
+            
+        }
     }
 }
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($growthx-dkgrey, 0.5);
+    z-index: 100;
+    position: fixed;
+    display: none;
+}
+
+.yikes-mailchimp-container {
+    form {
+        padding: 20px 0;
+
+        label, .yikes-easy-mc-form label {
+            @include make-sm-column(6);
+
+            span {
+                display: block;
+                position: relative;
+                top: 44px;  
+                color: $growthx-dkgrey;
+            }
+            input {
+                width: 100%;
+            }
+
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+    .mc4wp-alert, .yikes-easy-mc-success-message {
+        margin: 0 auto;
+        max-width: 640px;
+        text-align: center;
+        border: none;
+        color: $black;
+    }
+    .mc4wp-success {
+        background-color: $growthx-green;//#62c3b5;
+    }
+
+    .yikes-mailchimp-container .yikes-easy-mc-success-message {
+        max-width: auto;
+        background-color: $growthx-green;//#62c3b5;
+        color: $black;
+        max-width: 100%;
+        
+    }
+//}

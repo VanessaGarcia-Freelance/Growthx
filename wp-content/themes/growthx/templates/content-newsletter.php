@@ -6,7 +6,7 @@
       </div> -->
       <!-- <div class="col-sm-6"> -->
         <?php echo do_shortcode('[mc4wp_form]'); ?>
-      <!-- </div> -->
-    </div>
+
+    </div>        
   </div>
 </div>
