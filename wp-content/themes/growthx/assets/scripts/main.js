@@ -85,6 +85,35 @@
         
         // add_filter('pre_get_posts','searchfilter');
       }
+    },
+    'single': {
+      init: function() {
+        
+      },
+      finalize: function() {
+        //console.log('founder story / blog');
+
+        var paragraphs = $('.entry-content p'),
+            quotes = $('.quote'),
+            skip = Math.round(paragraphs.length / quotes.length),
+            gallery = $('.gallery-container');
+        //console.log( 'skip:', skip );
+
+        if(gallery) {
+          var placement = Math.floor(paragraphs.length / 2);
+          //console.log('gal placement', placement);
+          $(gallery).insertBefore(paragraphs[placement]);
+        }
+
+        if(quotes.length > 0) {
+          for (i = 0; i < quotes.length; i++) { 
+              var placement = skip*i;
+              //console.log('placement ', placement);
+              $(quotes[i]).insertBefore( paragraphs[placement] );
+          }
+        }
+        // JavaScript to be fired on the home page, after the init JS
+      }
     }
   };
 

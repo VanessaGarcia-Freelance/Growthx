@@ -30,7 +30,7 @@
         foreach ($quotes as $quote) {
           $quoteStyle = $quote->fields['quote-style'];
       ?>
-        <div class="row">
+        <div class="row quote">
         <blockquote class="<?php echo $quote->fields['quote-style'] ?>">
       <?php
         // will set this later to a class name
