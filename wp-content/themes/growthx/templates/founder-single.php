@@ -24,14 +24,12 @@
       <?php printf($storyContent); ?>
 
       <!-- <h4>Quotes</h4> -->
-
       <?php 
         //using a for loop for now. Will need to break these into individual blocks then insert them throughout the content.
-        foreach ($quotes as $quote) {
+        foreach ($quotes as $quote) :
           $quoteStyle = $quote->fields['quote-style'];
       ?>
         <div class="row quote">
-
             <blockquote class="<?php echo $quote->fields['quote-style'] ?>">
           <?php
             // will set this later to a class name
@@ -41,13 +39,13 @@
               echo $quote->fields['quote-text'];
           ?>
             </blockquote> 
-
         </div>
       <?php  
-        }
+        endforeach;
       ?>
 
       <!-- <h4>Gallery</h4> -->
+      
       <div class="gallery-container">
           <?php 
             foreach ($galleryImages as $slide) {
@@ -63,6 +61,7 @@
             }
           ?>
       </div>
+    
 
 
     </div>
