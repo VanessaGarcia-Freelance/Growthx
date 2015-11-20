@@ -100,9 +100,9 @@
         //console.log( 'skip:', skip );
 
         if(gallery) {
-          var placement = Math.floor(paragraphs.length / 2);
-          //console.log('gal placement', placement);
-          $(gallery).insertBefore(paragraphs[placement]);
+          var galplacement = Math.floor(paragraphs.length / 2);
+          //console.log('gal galplacement', galplacement);
+          $(gallery).insertBefore(paragraphs[galplacement]);
         }
 
         if(quotes.length > 0) {

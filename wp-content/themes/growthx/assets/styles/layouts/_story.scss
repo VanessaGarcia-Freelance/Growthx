@@ -1,4 +1,14 @@
 body.single {
+
+    .fve-max-width-wrapper {
+        margin: 40px auto;
+    }
+    iframe{
+        margin: 0 auto 40px auto;
+        @include make-sm-column(12);
+            // @include make-sm-column-offset(1);
+    }   
+
     .story {
         header {
             height: 500px;

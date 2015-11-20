@@ -44,8 +44,8 @@
         endforeach;
       ?>
 
-      <!-- <h4>Gallery</h4> -->
-      
+     <!-- <h4>Gallery</h4> -->
+      <?php if (sizeof($galleryImages) > 0) : ?>
       <div class="gallery-container">
           <?php 
             foreach ($galleryImages as $slide) {
@@ -61,9 +61,8 @@
             }
           ?>
       </div>
+      <?php endif; ?>
     
-
-
     </div>
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
