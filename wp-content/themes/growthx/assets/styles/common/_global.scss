@@ -113,31 +113,75 @@ nav.navmenu {
 }
 
 // Block Quotes
+.quote {
+    .quote-block {
+        &.right {
+            @include make-sm-column(4);
+            @include make-sm-column-offset(1);
+
+            blockquote {
+                float: left;
+            }
+
+            &:after {
+                @include accentBlockSide($growthx-green);
+                display: block;
+                height: 100%;
+                position: absolute;
+                right: 0;
+            }
+            text-align: right;
+            
+        }
+        //pulled to the right
+        &.left{
+            @include make-sm-column(6);
+            @include make-sm-column-offset(6);
+            &:before {
+                @include accentBlockSide($growthx-blue);
+            }
+        }
+    }
+}
+
 blockquote {
     border: none;
     font-size: 23px;
     line-height: 31px;
-    &.1{
-
-    }
-    //pulled to the left
+    padding: 0;
     &.right {
-        @include make-sm-column(4);
-        @include make-sm-column-offset(1);
-        &:after {
-            @include accentBlockSide($growthx-green);
+            @include make-sm-column(5);
+            @include make-sm-column-offset(1);
+            padding-right: 40px;
+
+            &:after {
+                @include accentBlockSide($growthx-green);
+                display: block;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            text-align: right;
+            
         }
-        text-align: right;
-        
-    }
-    //pulled to the right
-    &.left{
-        @include make-sm-column(6);
-        @include make-sm-column-offset(6);
-        &:before {
-            @include accentBlockSide($growthx-blue);
+        //pulled to the right
+        &.left{
+            @include make-sm-column(5);
+            @include make-sm-column-offset(6)
+            padding-left: 40px;
+
+            &:before {
+                @include accentBlockSide($growthx-blue);
+                display: block;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
         }
-    }
+    //pulled to the left
+    
 }
 
 .modal {

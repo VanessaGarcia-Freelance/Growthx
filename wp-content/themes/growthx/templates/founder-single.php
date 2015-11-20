@@ -31,15 +31,17 @@
           $quoteStyle = $quote->fields['quote-style'];
       ?>
         <div class="row quote">
-        <blockquote class="<?php echo $quote->fields['quote-style'] ?>">
-      <?php
-        // will set this later to a class name
-          if($quoteStyle == 4) {    
-            echo "<img src='" . $quote->fields['quote-image'] . "' />"; 
-          }
-          echo $quote->fields['quote-text'];
-      ?>
-        </blockquote> 
+
+            <blockquote class="<?php echo $quote->fields['quote-style'] ?>">
+          <?php
+            // will set this later to a class name
+              if($quoteStyle == 4) {    
+                echo "<img src='" . $quote->fields['quote-image'] . "' />"; 
+              }
+              echo $quote->fields['quote-text'];
+          ?>
+            </blockquote> 
+
         </div>
       <?php  
         }
