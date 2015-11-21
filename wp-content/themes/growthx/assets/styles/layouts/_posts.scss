@@ -40,9 +40,12 @@ body.blog {
                 //@include make-sm-column(12);
                 //background-color: crimson;
             }
-            &:nth-child(5n+1), 
-            &:nth-child(5n+2), 
-            &:nth-child(5n+3) {
+            &:nth-child(4n+6), 
+            &:nth-child(4n+7), 
+            &:nth-child(4n+8),
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
                 //background-color: green;
                 @include make-sm-column(4);
                 // border-bottom: 2px solid grey;
@@ -56,9 +59,11 @@ body.blog {
                     font-size: 17px;
                 }
             }
-            &:nth-child(5n+4) {
+            &:nth-child(5n+9),
+            &:nth-child(4) {
                 //background-color: green;
                 @include make-sm-column(12);
+                padding-top: 30px;
                 h2 {
                     font-size: 47px;
                 }
@@ -85,8 +90,8 @@ body.blog {
         padding: 100px 0;
         color: $white;
         margin-top: 20px;
-        margin-left: -10.333333%;
-        width: 111.333333%;
+        margin-left: -13.333333%;
+        width: 126%;
         float:left;
         position: relative;
 
@@ -118,7 +123,7 @@ body.blog {
                     background: transparent;
                     border: 2px solid white;
                     color: white;
-                    width: 80%;
+                    width: 70%;
 
                     &::-webkit-input-placeholder {
                        color: white;

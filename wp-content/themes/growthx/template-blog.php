@@ -10,7 +10,7 @@
 <?php endwhile; ?>
 
 
-<?php query_posts( array( 'posts_per_page' => 9 ) ); ?>  
+<?php query_posts( array( 'posts_per_page' => -1 ) ); ?>  
  
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
  
@@ -39,7 +39,7 @@
         </div>
 
         <div id="main-content" class="container-fluid">
-            <div class="articles col-sm-offset-1 col-sm-10>" >
+            <div class="articles col-sm-offset-1 col-sm-10" >
 
             <?php else : ?> 
                 <article <?php post_class(); ?>>
