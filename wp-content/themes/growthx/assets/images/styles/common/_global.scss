@@ -88,6 +88,16 @@ hr {
 }
 
 
+// Carousel 
+
+.carousel-control.left{
+   background: url(../images/white-arrow-left.png) no-repeat center center;
+}
+.carousel-control.right{
+   background: url(../images/white-arrow-right.png) no-repeat center center;
+} 
+
+
 
 
 //  Menus
@@ -183,6 +193,7 @@ blockquote {
     //pulled to the left
     
 }
+
 
 .modal {
     display: block;

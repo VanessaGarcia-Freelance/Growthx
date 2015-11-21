@@ -49,31 +49,53 @@
   <div class="latest-founder-story container-fluid">
     <div class="founder-carousel row">
 
-    <?php 
-      $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => '1' );
-      //Define the loop based on arguments
-    $loop = new WP_Query( $args );
-     
-    //Display the contents 
-    while ( $loop->have_posts() ) : $loop->the_post();
-      $fieldArray = array( "user_id" => $recent["ID"] );
-      $headerText = types_render_field( "header-text", $fieldArray );
-      $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
-    ?>
+        <div id="carousel-founder" class="carousel slide" data-ride="carousel">
 
-    <div class="story-entry" style="background-image: url( <?php printf($headerImage);  ?> )">
-      <div class="col-sm-12 border">
-        <div> 
-          <div class="col-sm-6 col-sm-offset-6">
-            <h2><?php the_title(); ?></h2>
-            <h3><?php printf($headerText);  ?></h3>
-            <p class="readmore"><a href="<?php the_permalink() ?>">Read the Founder Story</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div class="carousel-inner" role="listbox">
 
-  <?php endwhile;?>
+            <?php 
+              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => '3' );
+              //Define the loop based on arguments
+            $loop = new WP_Query( $args );
+             
+            //Display the contents 
+
+              $active = ' active';
+            while ( $loop->have_posts() ) : $loop->the_post();
+              $fieldArray = array( "user_id" => $recent["ID"] );
+              $headerText = types_render_field( "header-text", $fieldArray );
+              $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
+            ?>
+            <div class="item <?php echo $active; ?>">
+              <div class="story-entry " style="background-image: url( <?php printf($headerImage);  ?> );">
+                <div class="col-sm-12 border">
+                  <div> 
+                    <div class="col-sm-6 col-sm-offset-6">
+                      <h2><?php the_title(); ?></h2>
+                      <h3><?php printf($headerText);  ?></h3>
+                      <p class="readmore"><a href="<?php the_permalink() ?>">Read the Founder Story</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <?php 
+            $active = '';
+            endwhile;
+          ?>
+          </div><!-- end carousel-inner -->
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-founder" role="button" data-slide="prev" style="background: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-arrow-left.png) no-repeat center center;">
+            <span class="" aria-hidden="true"> </span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-founder" role="button" data-slide="next" style="background: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-arrow-right.png) no-repeat center center;">
+            <span class="" aria-hidden="true"> </span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><!-- end carousel -->
     </div>
   </div>
 
