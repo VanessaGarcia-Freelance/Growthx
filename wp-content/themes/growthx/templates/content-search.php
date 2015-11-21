@@ -6,4 +6,5 @@
   <div class="entry-summary">
     <?php the_excerpt(); ?>
   </div>
+  <p class="readmore"><a href="<?php the_permalink(); ?>">Read More</a></p>
 </article>

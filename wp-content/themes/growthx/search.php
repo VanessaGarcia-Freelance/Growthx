@@ -7,8 +7,10 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<div class="col-sm-8 col-sm-offset-2">
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', 'search'); ?>
 <?php endwhile; ?>
+</div>
 
 <?php the_posts_navigation(); ?>

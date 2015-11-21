@@ -108,4 +108,15 @@
     }
 }
 
+.search{
+    .page-header {
+        display: none;
+    }
+    .menu-primary-container {
+        a {
+            color: $growthx-dkgrey;
+        }
+    }
+}
+
 
