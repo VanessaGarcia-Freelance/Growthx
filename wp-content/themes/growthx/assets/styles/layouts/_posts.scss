@@ -1,0 +1,132 @@
+body.blog {
+    .heading-content {
+        // background-color: $growthx-dkgrey;
+        // display: none;
+        height: 293px;
+
+        .readmore {
+            a {
+                color: $growthx-ltgrey;
+                // font-size: 18px;
+            }
+        
+        } 
+    }
+
+    .search {
+        padding: 20px 0;
+        border-bottom: 2px solid $growthx-dkgrey;
+        text-align: center;
+
+        input {
+            border-radius: 0;
+        }
+    }
+
+    #main-content {
+        // background-color: black;
+        // @include make-row();
+
+        .articles {
+            // padding: 80px 0;
+        }
+
+        article{
+            // background-color: grey;
+            padding-top: 40px;
+            padding-bottom: 20px;
+
+            &:first-child {
+                //@include make-sm-column(12);
+                //background-color: crimson;
+            }
+            &:nth-child(5n+1), 
+            &:nth-child(5n+2), 
+            &:nth-child(5n+3) {
+                //background-color: green;
+                @include make-sm-column(4);
+                // border-bottom: 2px solid grey;
+                height: 100%
+
+                h2 {
+                   font-size:  30px;
+                }
+
+                .readmore {
+                    font-size: 17px;
+                }
+            }
+            &:nth-child(5n+4) {
+                //background-color: green;
+                @include make-sm-column(12);
+                h2 {
+                    font-size: 47px;
+                }
+                .readmore {
+                    font-size: 19px;
+                }
+                &:nth-child(even) {
+                    &:before {
+                       @include accentblock($growthx-blue); 
+                    }
+                }
+                &:nth-child(odd) {
+                    &:before {
+                       @include accentblock($growthx-green); 
+                    }
+                }
+            }
+        }
+    }
+
+    .newsletter-block {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 100px 0;
+        color: $white;
+        margin-top: 20px;
+        margin-left: -10.333333%;
+        width: 111.333333%;
+        float:left;
+        position: relative;
+
+        h2 {
+            @include fontSemiBold();
+            font-size: 39px;
+            margin-bottom: 0;
+            
+            &:before {
+                 @include accentblock($white);
+                 margin-bottom: 10px;
+            }
+        }
+        h3 {
+            @include fontRegular();
+            font-size: 21px;
+            margin-top: 0;
+        }
+
+        form {
+            > div:first-child {
+                display: none;
+            }
+            .col-sm-6 {
+                padding: 0;
+                input{
+                    float: left;
+                    margin-right: 10px;
+                    background: transparent;
+                    border: 2px solid white;
+                    color: white;
+                    width: 80%;
+
+                    &::-webkit-input-placeholder {
+                       color: white;
+                    }
+                }
+            }
+
+        }
+    }
+    
+}

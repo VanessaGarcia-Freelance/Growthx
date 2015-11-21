@@ -32,3 +32,15 @@ function svg_mime_types( $mimes ){
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;}
 add_filter( 'upload_mimes', 'svg_mime_types' );
+
+
+
+//filtering search just for blog posts at the moment
+function searchfilter($query) {
+  if ($query->is_search && !is_admin() ) {
+    $query->set('post_type',array('post'));
+  }
+  return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
