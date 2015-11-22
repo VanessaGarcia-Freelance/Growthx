@@ -47,23 +47,42 @@
      <!-- <h4>Gallery</h4> -->
       <?php if (sizeof($galleryImages) > 0) : ?>
       <div class="gallery-container">
-          <?php 
-            foreach ($galleryImages as $slide) {
-              $image = $slide ->fields['gallery-image'];
-              $caption = $slide ->fields['image-caption'];
-              echo "<div class='slide' style='background-image: url(" . $image . ")' >";
-              echo "<div class='border'>";
-              echo "<div class='caption-container'>";
-              echo "<div class='caption'><h4>" . $caption . "</h4></div>";
-              echo "</div>";
-              echo "</div>";
-              echo "</div>";
-            }
-          ?>
+        <div id="carousel-founder" class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner" role="listbox">
+            <?php 
+              $active = ' active';
+              foreach ($galleryImages as $slide) {
+                $image = $slide ->fields['gallery-image'];
+                $caption = $slide ->fields['image-caption'];
+                echo "<div class='slide item ".$active."' style='background-image: url(" . $image . ")' >";
+                echo "<div class='border'>";
+                echo "<div class='caption-container'>";
+                echo "<div class='caption'><h4>" . $caption . "</h4></div>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+
+                $active = '';
+              }
+            ?>
+          </div><!-- end carousel-inner -->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-founder" role="button" data-slide="prev" style="background: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-arrow-left.png) no-repeat center center;">
+          <span class="" aria-hidden="true"> </span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-founder" role="button" data-slide="next" style="background: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/white-arrow-right.png) no-repeat center center;">
+          <span class="" aria-hidden="true"> </span>
+          <span class="sr-only">Next</span>
+        </a>
+        </div><!-- end carousel -->
+
       </div>
       <?php endif; ?>
     
-    </div>
+    </div> 
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>

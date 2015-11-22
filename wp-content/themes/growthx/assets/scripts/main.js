@@ -20,6 +20,10 @@
       init: function() {
         // JavaScript to be fired on all pages
         console.log('common');
+
+        $('.carousel').carousel({
+            interval: 8000 //changes the speed
+        })
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
