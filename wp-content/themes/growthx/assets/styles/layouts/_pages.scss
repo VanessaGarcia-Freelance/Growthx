@@ -1,5 +1,17 @@
 body {
     background: none;
+
+    .page-story{
+        .entry-content {
+            p { 
+                clear: both;
+                float: none;
+                width: 60%;
+                margin: 20px auto;
+                line-height: 23px;
+            }
+        }
+    }
 }
 
 .main {
@@ -8,6 +20,7 @@ body {
 .heading-content {
     // @include accentblock($growthx-blue);
 }
+
 
 body.join {
 
