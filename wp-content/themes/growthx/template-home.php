@@ -6,10 +6,8 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-  <!-- Commenting out the Member Grid for now -->
-  <?php //get_template_part('templates/content', 'membergrid'); ?>
-
   <?php get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/content', 'membergrid'); ?>
 
 
   <!-- LATEST BLOG POSTS -->

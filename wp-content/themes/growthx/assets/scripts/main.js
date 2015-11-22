@@ -29,36 +29,53 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
         $( '.membergrid' ).gridrotator( {
           rows : 3,
           columns : 8,
           maxStep : 2,
           interval : 2000,
           w1024 : {
-            rows : 5,
-            columns : 6
+            rows : 4,
+            columns : 8
           },
           w768 : {
-            rows : 5,
+            rows : 4,
             columns : 5
           },
           w480 : {
-            rows : 6,
+            rows : 4,
             columns : 4
           },
           w320 : {
-            rows : 7,
+            rows : 4,
             columns : 4
           },
           w240 : {
-            rows : 7,
+            rows : 4,
             columns : 3
           },
           preventClick    : false,
         } );
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+        
+
+
+        function resizeHeader () {
+          console.log('height');
+
+          var mgHeight = $('.membergrid').height() - 25;
+          console.log( 'height:',mgHeight );
+          
+          $('.page-header').height(mgHeight);
+        }
+        //$('.pageheader').height();
+
+        $(window).load(function(){
+          resizeHeader();
+        });
+        $(window).resize(resizeHeader()); 
 
       }
     },

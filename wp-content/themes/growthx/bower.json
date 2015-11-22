@@ -35,7 +35,6 @@
     },
     "gridrotator": {
       "main": [
-        "./css/demo.css",
         "./css/fallback.css",
         "./css/style.css",
         "./js/modernizr.custom.26633.js",

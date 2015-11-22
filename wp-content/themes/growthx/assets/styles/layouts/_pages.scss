@@ -1,3 +1,7 @@
+body {
+    background: none;
+}
+
 .main {
     padding: 0;
 }
@@ -108,8 +112,12 @@ body.join {
 }
 
 body.home {
+    .membergrid {
+        // position: absolute;
+        margin: 0;
+    }
     .lastest-blog-posts {
-        margin-top: -3px;
+        margin-top: -2px;
         // padding-bottom: 40px;
 
         .featured-post {

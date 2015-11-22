@@ -1,5 +1,6 @@
-<div class="membergrid ri-grid ri-grid-size-3">
-  <img class="ri-loading-image" src="http://tympanus.net/Development/AnimatedResponsiveImageGrid/images/loading.gif"/>
+
+<div id="ri-grid" class="membergrid ri-grid ri-grid-size-3">
+  <img class="ri-loading-image" src="http://growthx1.wpengine.com/wp-content/uploads/2015/11/loading.gif"/>
 
   <ul>
   <?php 
@@ -37,8 +38,7 @@
     </li>
 
   <?php endwhile;?>
-  wp_reset_postdata();
+  <?php wp_reset_postdata(); ?>
 
 </ul>
 </div>
-

@@ -47,16 +47,24 @@
 .home {
     .page-header {
         height: 500px;
+        pointer-events: none;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        border-bottom: 0;
         
         > div {
             @include make-sm-column(12);
             @include make-sm-column-offset(0);
+            border: none;
         }
 
         h1, h2 {
             text-align: center;
             @include fontRegular();
+            @include textShadow();
             // letter-spacing: 0.5px;
+            color: $white;
 
             &:before {
                 display: none;
@@ -79,6 +87,9 @@
             font-size: 22px;
             opacity: 0.7;
             margin-top: 0;
+        }
+        a {
+            pointer-events: fill;
         }
     }
 }
