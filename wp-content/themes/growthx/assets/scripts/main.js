@@ -32,6 +32,34 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        $( '.membergrid' ).gridrotator( {
+          rows : 3,
+          columns : 8,
+          maxStep : 2,
+          interval : 2000,
+          w1024 : {
+            rows : 5,
+            columns : 6
+          },
+          w768 : {
+            rows : 5,
+            columns : 5
+          },
+          w480 : {
+            rows : 6,
+            columns : 4
+          },
+          w320 : {
+            rows : 7,
+            columns : 4
+          },
+          w240 : {
+            rows : 7,
+            columns : 3
+          },
+          preventClick    : false,
+        } );
+
       }
     },
     // About us page, note the change from about-us to about_us.
@@ -108,6 +136,52 @@
           }
         }
         // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    'community': {
+      init: function() {
+
+      },
+      finalize: function() {
+        console.log('community');
+
+        $( '.membergrid' ).gridrotator( {
+          rows : 3,
+          columns : 8,
+          maxStep : 2,
+          interval : 2000,
+          w1024 : {
+            rows : 5,
+            columns : 6
+          },
+          w768 : {
+            rows : 5,
+            columns : 5
+          },
+          w480 : {
+            rows : 6,
+            columns : 4
+          },
+          w320 : {
+            rows : 7,
+            columns : 4
+          },
+          w240 : {
+            rows : 7,
+            columns : 3
+          },
+          preventClick    : false,
+        } );
+
+        // $('.member').click(function(evt){
+        //   evt.preventDefault();
+        //   console.log('member');
+        // });
+
+        // $( "a" ).click(function( event ) {
+        //   event.preventDefault();
+        //   console.log('a');
+        // });
       }
     }
   };
