@@ -20,6 +20,10 @@
       </div>
     </header>
 
+    <!-- <div class="meta">
+    <?php //echo get_avatar( $post->post_author, 46 ); ?>
+    </div> -->
+
      <div class="entry-content">
       <?php the_content(); ?>
 
@@ -99,7 +103,9 @@
              <a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
              </a>
              <div class="perfect-related_by-category">
-             <a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+             <a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
+             <?php echo get_avatar( $post->post_author, 70 ); ?>
+             <?php the_title(); ?></a>
              </div>
             </li>
             <? }

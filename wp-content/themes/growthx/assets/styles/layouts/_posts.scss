@@ -155,7 +155,7 @@ body.blog {
             
 
             .posts{
-                font-size: 23px;
+                font-size: 21px;
                 padding: 40px 40px 0 40px;
                 -webkit-column-count: 2;
                   -moz-column-count: 2;
@@ -167,7 +167,7 @@ body.blog {
 
                 li {
                     list-style-type: none;
-                    padding: 20px 40px;
+                    padding: 20px 10px;
                     height: 150px;
 
                     a {
@@ -175,6 +175,17 @@ body.blog {
                         &:hover{
                             color: $growthx-dkgrey;
                         }
+                    }
+
+                    .perfect-related_by-category {
+                        a {
+                            display: inline-block;
+                        }
+                    }
+
+                    img {
+                        float: left;
+                        margin-right: 10px;
                     }
                 }
             }
