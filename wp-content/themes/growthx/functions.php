@@ -44,3 +44,20 @@ function searchfilter($query) {
 }
 
 add_filter('pre_get_posts','searchfilter');
+
+/* TEMP HOMEPAGE GRID FILTER */
+
+function tempgrid($totalimages,$columns=8) {
+  $rows = $totalimages/$columns;
+  $height = 640/$rows;
+  $width = 100/$columns;
+  $i=1;
+  $output = '<style>.home .page-header > div {border: 5px solid #f2f3f1;min-height: 620px;}ul.tempgrid,ul.tempgrid li{padding:0px;margin:0px;list-style-type:none;-webkit-filter:grayscale(100%);filter: grayscale(100%);opacity:.5;}</style>';
+  $output .= '<ul class="tempgrid">';
+   while ($i <= $totalimages) {
+     $output .= '<li style="height:'.$height.'px;width:'.$width.'%;margin:0px;float:left;padding:0px;background:url('.get_stylesheet_directory_uri().'/assets/images/grid-'.$i.'.jpg) no-repeat center center;background-size:cover;">
+      <a class="member" href="/community"></a></li>';
+    $i++;
+  }
+  return $output . '</ul>';
+}
