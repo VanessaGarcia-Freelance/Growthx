@@ -134,6 +134,51 @@ body.blog {
         }
     }
     
+}
+.single {
+    .related-posts {
+        background-color: $growthx-ltgrey;
 
-    
+        .posts-container {
+          
+            padding: 40px 0; 
+
+            h2{
+               text-align: center;
+               font-size: 34px;
+               // @include fontLight(); 
+
+               &:before {
+                @include accentBlockSide($growthx-green);
+               }
+            }
+            
+
+            .posts{
+                font-size: 23px;
+                padding: 40px 40px 0 40px;
+                -webkit-column-count: 2;
+                  -moz-column-count: 2;
+                       column-count: 2;
+
+               -webkit-column-gap: 20px;
+                  -moz-column-gap: 20px;
+                       column-gap: 20px;
+
+                li {
+                    list-style-type: none;
+                    padding: 20px 40px;
+                    height: 150px;
+
+                    a {
+                        color: $growthx-grey;
+                        &:hover{
+                            color: $growthx-dkgrey;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
 }
