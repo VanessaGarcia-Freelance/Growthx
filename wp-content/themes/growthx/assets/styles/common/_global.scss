@@ -10,9 +10,15 @@ h2, blockquote, a {
 }
 h1 {
     font-size: 39px;
+                a{
+                    text-transform:none;
+                }
 }
 h2 {
     font-size: 22px;
+                a{
+                    text-transform:none;
+                }
 }
 
 
@@ -67,6 +73,7 @@ hr {
         text-transform: uppercase;
         font-size: 18px;
         color: $growthx-grey;
+        letter-spacing:2.5px;
         &:after {
              background: url(../images/right-arrow-grey.png) no-repeat;
             background-size: 10px;

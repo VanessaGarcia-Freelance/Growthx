@@ -38,9 +38,15 @@ body.join {
 
             h1 {
                 margin-bottom: 0;
+                a{
+                    text-transform:none;
+                }
             }
             h2{
                 margin: 0;
+                a{
+                    text-transform:none;
+                }
             }
         }
     }
@@ -70,12 +76,18 @@ body.join {
                    @include accentblock($black);
                    margin-bottom: 10px;
                 }
+                a{
+                    text-transform:none;
+                }
             }
             h3 {
                 @include fontRegular();
                 font-weight: lighter;
                 font-size: 23px;
                 margin-top: 0;
+                a{
+                    text-transform:none;
+                }
             }
             .border-btn {
                 text-align: center;
@@ -112,6 +124,9 @@ body.join {
 
         h2 {
             font-size: 23px;
+                a{
+                    text-transform:none;
+                }
         }
         .button {
             button {
@@ -130,11 +145,11 @@ body.home {
         margin: 0;
     }
     .lastest-blog-posts {
-        margin-top: -2px;
+        margin-top: -3px;
         // padding-bottom: 40px;
 
         .featured-post {
-            border-bottom: 1px solid $growthx-grey;
+            border-bottom: 3px solid $growthx-grey;
             background: url(../images/growthx-logo.svg) no-repeat 100% center;
             background-size: contain;
             padding-left: 0;
@@ -146,6 +161,9 @@ body.home {
             h2 {
                 font-size: 46px;
                 line-height: 55px;
+                a{
+                    text-transform:none;
+                }
             }
         }
         .post-carousel {
@@ -153,6 +171,9 @@ body.home {
             h2 {
                 font-size: 32px;
                 line-height: 43px;
+                a{
+                    text-transform:none;
+                }
             }
         }
     }
@@ -185,13 +206,23 @@ body.home {
                 h2 {
                     font-size: 65px;
                     @include fontSemiBold();
+                    a{
+                        text-transform:none;
+                    }
                 }
                 h3{
                     font-size: 39px;
+                    a{
+                        text-transform:none;
+                    }
                 }
                 .readmore {
                     a {
-                        color: $growthx-ltgrey
+                        color: $growthx-ltgrey;
+                        &:after {
+                             background: url(../images/white-arrow-right.png) no-repeat;
+                            background-size: 10px; 
+                        }
                     }
                 }
             }
@@ -285,6 +316,19 @@ body.contact {
 
 body.community {
     .main{
+
+        .heading-content{
+            h1{
+                margin-bottom:0px;
+            }
+            h2{
+                margin-top:5px;
+            }
+            p{
+                line-height:1.7em;
+            }
+        }
+
         .membergrid{
             margin: 40px 0;
         }
@@ -299,6 +343,12 @@ body.community {
                -webkit-column-gap: 20px;
                   -moz-column-gap: 20px;
                        column-gap: 20px;
+            }
+        }
+        .entry-content{
+            h2{
+                margin-top:5px;
+                margin-bottom:10px;
             }
         }
 
