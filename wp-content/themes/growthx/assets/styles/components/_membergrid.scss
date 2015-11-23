@@ -1,12 +1,16 @@
 .membergrid {
-    // height: 300px;
+    min-height: 500px;
+    background-image: url('http://growthx1.wpengine.com/wp-content/uploads/2015/11/mosaic.png');
+    background-size: cover;
     // background-color: $growthx-grey;
     margin: 40px 0;
+    overflow: auto;
 
     &.ri-grid ul li {
         height: 0;
         width: 0;
     }
+
 
     .member {
         
@@ -20,17 +24,27 @@
         filter: grayscale(100%);
         background-color: $growthx-green;
         background-blend-mode: multiply;
+        
+        // -webkit-transition: 0.5s background-color ease !important;
+        // -moz-transition: 0.5s background-color ease !important;
+        // -o-transition: 0.5s background-color ease !important;
+        // transition: 0.5s background-color ease !important;
+
+        // transition: top 800ms ease 0ms !important;
+        
 
         &:hover {
-           -webkit-transition: 0s -webkit-filter linear !important;
-           -moz-transition: 0s -moz-filter linear !important;
-           -o-transition: 0s -o-filter linear !important;
-           transition: 0s filter linear !important;
+           -webkit-transition: 0.5s -webkit-filter ease !important;
+           -moz-transition: 0.5s -moz-filter ease !important;
+           -o-transition: 0.5s -o-filter ease !important;
+           transition: 0.5s filter ease !important;
            // filter: sepia(100%) hue-rotate(107deg) brightness(50%);
            // background-color: $growthx-green;
            // background-blend-mode: multiply;
 
            filter: grayscale(0%);
+
+            
 
            .text {
             display: block;

@@ -52,31 +52,45 @@
           <div class="carousel-inner" role="listbox">
 
             <?php 
-              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => '3' );
-              //Define the loop based on arguments
-            $loop = new WP_Query( $args );
-             
-            //Display the contents 
+              //grab all posts
+              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => -1 );
 
+              //Define the loop based on arguments
+              $loop = new WP_Query( $args );
               $active = ' active';
+              $entry = 0;
+             
+            //loop through entries
             while ( $loop->have_posts() ) : $loop->the_post();
               $fieldArray = array( "user_id" => $recent["ID"] );
-              $headerText = types_render_field( "header-text", $fieldArray );
-              $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
-            ?>
-            <div class="item <?php echo $active; ?>">
-              <div class="story-entry " style="background-image: url( <?php printf($headerImage);  ?> );">
-                <div class="col-sm-12 border">
-                  <div> 
-                    <div class="col-sm-6 col-sm-offset-6">
-                      <h2><?php the_title(); ?></h2>
-                      <h3><?php printf($headerText);  ?></h3>
-                      <p class="readmore"><a href="<?php the_permalink() ?>">Read the Founder Story</a></p>
+              $founderStory = types_render_field( "founder-story", $fieldArray );
+
+              //if entry has a founder story and there is less than 3 slides created
+              if(!empty($founderStory) && $entry < 3) :
+                $headerText = types_render_field( "header-text", $fieldArray );
+                $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
+                ?>
+                
+                <!-- create a new slide -->
+                 <div class="item <?php echo $active; ?>">
+                  <div class="story-entry " style="background-image: url( <?php printf($headerImage);  ?> );">
+                    <div class="col-sm-12 border">
+                      <div> 
+                        <div class="col-sm-6 col-sm-offset-6">
+                          <h2><?php the_title(); ?></h2>
+                          <h3><?php printf($headerText);  ?></h3>
+                          <p class="readmore"><a href="<?php the_permalink() ?>">Read the Founder Story</a></p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+
+                <?php
+                $entry++;
+              endif;
+            ?>
+           
 
           <?php 
             $active = '';

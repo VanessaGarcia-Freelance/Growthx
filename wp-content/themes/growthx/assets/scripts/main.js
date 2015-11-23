@@ -23,7 +23,7 @@
 
         $('.carousel').carousel({
             interval: 8000 //changes the speed
-        })
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -58,6 +58,10 @@
             rows : 4,
             columns : 3
           },
+          animType : 'slideTop',
+          // animation easings
+          animEasingOut : 'ease',
+          animEasingIn  : 'ease',
           preventClick    : false,
         } );
       },
@@ -191,6 +195,7 @@
             rows : 7,
             columns : 3
           },
+          animType : 'slideTop',
           preventClick    : false,
         } );
 
