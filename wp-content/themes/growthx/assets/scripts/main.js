@@ -58,6 +58,10 @@
             rows : 4,
             columns : 3
           },
+          animType : 'slideTop',
+          // animation easings
+          animEasingOut : 'ease',
+          animEasingIn  : 'ease',
           preventClick    : false,
         } );
       },
@@ -191,6 +195,7 @@
             rows : 7,
             columns : 3
           },
+          animType : 'slideTop',
           preventClick    : false,
         } );
 
