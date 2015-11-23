@@ -8,6 +8,13 @@ body.blog {
             a {
                 color: $growthx-ltgrey;
                 // font-size: 18px;
+
+            }
+
+            a:after{
+                background: url(../images/white-arrow-right.png) no-repeat;
+                -webkit-background-size: 10px 10px;
+                background-size: 10px;
             }
         
         } 
@@ -180,6 +187,8 @@ body.blog {
                     .perfect-related_by-category {
                         a {
                             display: inline-block;
+                            letter-spacing:.05em;
+                            text-transform:none;
                         }
                     }
 

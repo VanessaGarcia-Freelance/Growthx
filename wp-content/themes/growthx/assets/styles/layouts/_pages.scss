@@ -59,6 +59,9 @@ body.join {
         &.bgImg {
             color: $white;
             @include textShadow();
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
 
         .heading-content {
@@ -252,7 +255,7 @@ body.contact {
 
     .locations {
         border-top: 2px solid $growthx-dkgrey;
-        border-bottom: 2px solid $growthx-dkgrey;
+        border-bottom: 0px solid $growthx-dkgrey;
 
         .row {
             .address {
@@ -272,6 +275,12 @@ body.contact {
                     @include fontRegular();
                     font-size: 21px;
                     margin-top: 0;
+                }
+                p{
+                    margin:0;
+                    a{
+                        text-transform:none;
+                    }
                 }
             }
         }
@@ -361,5 +370,13 @@ body.community {
 body.search {
     .main {
         margin-top: 100px;
+    }
+}
+
+body.careers{
+    .page-header.border{
+        div {
+            border: 0px solid #f2f3f1; 
+        }
     }
 }
