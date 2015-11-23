@@ -69,6 +69,9 @@
       <div class="share-btn col-sm-8 col-sm-offset-2">SHARE</div>
       </div>
     </div> -->
+    <?php echo do_shortcode( '[SSB_SHARE class_first="" class_second="" class_link="" class_icon="" layout="square" remove_inside="0" remove_counter="0"]' ); ?>
+
+    
 
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>

@@ -83,8 +83,12 @@
       <?php endif; ?>
     
     </div> 
+    
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>
   </article>
+  <?php the_content(); ?>
 <?php endwhile; ?>
+ <?php wp_reset_postdata(); ?>
+
