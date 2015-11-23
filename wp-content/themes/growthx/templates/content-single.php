@@ -104,7 +104,8 @@
              </a>
              <div class="perfect-related_by-category">
              <a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
-             <?php echo get_avatar( $post->post_author, 70 ); ?>
+             <?php /*echo get_avatar( $post->post_author, 70 );*/ ?>
+             <?php echo the_post_thumbnail( array(70, 70)  ); ?>
              <?php the_title(); ?></a>
              </div>
             </li>
