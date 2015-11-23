@@ -34,10 +34,10 @@
       init: function() {
         // JavaScript to be fired on the home page
         $( '.membergrid' ).gridrotator( {
-          rows : 3,
+          rows : 4,
           columns : 8,
-          maxStep : 2,
-          interval : 2000,
+          maxStep : 0,
+          interval : 99999999,
           w1024 : {
             rows : 4,
             columns : 8
@@ -58,11 +58,11 @@
             rows : 4,
             columns : 3
           },
-          animType : 'slideTop',
+          animType : 'fadeInOut',
           // animation easings
           animEasingOut : 'ease',
           animEasingIn  : 'ease',
-          preventClick    : false,
+          preventClick    : true,
         } );
       },
       finalize: function() {
@@ -175,10 +175,10 @@
         console.log('community');
 
         $( '.membergrid' ).gridrotator( {
-          rows : 3,
+          rows : 4,
           columns : 8,
-          maxStep : 2,
-          interval : 2000,
+          maxStep : 0,
+          interval : 999999,
           w1024 : {
             rows : 5,
             columns : 6
@@ -199,7 +199,7 @@
             rows : 7,
             columns : 3
           },
-          animType : 'slideTop',
+          animType : 'fadeInOut',
           preventClick    : false,
         } );
 

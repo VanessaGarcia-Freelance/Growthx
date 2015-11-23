@@ -7,15 +7,9 @@
 <?php while (have_posts()) : the_post(); ?>
 
   <?php get_template_part('templates/page', 'header'); ?> <?php 
-    //get_template_part('templates/content', 'membergrid');
-    ?>
-<div id="tempgrid" class="  ">
-  <div style="overflow:hidden;background:#333333;">
-  <?php 
-    echo tempgrid(32,8);
+    get_template_part('templates/content', 'homegrid');
   ?>
-  </div>
-</div>
+
 
 
 

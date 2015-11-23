@@ -48,6 +48,16 @@ add_filter('pre_get_posts','searchfilter');
 /* TEMP HOMEPAGE GRID FILTER */
 
 function tempgrid($totalimages,$columns=8) {
+
+  /* use like:
+    <div id="tempgrid" class="  ">
+      <div style="overflow:hidden;background:#333333;">
+      <?php 
+        echo tempgrid(32,8);
+      ?>
+      </div>
+    </div>
+    */
   $rows = $totalimages/$columns;
   $height = 640/$rows;
   $width = 100/$columns;
