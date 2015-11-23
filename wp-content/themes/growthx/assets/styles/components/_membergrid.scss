@@ -1,7 +1,10 @@
 .membergrid {
-    min-height: 300px;
+    min-height: 500px;
+    background-image: url('http://growthx1.wpengine.com/wp-content/uploads/2015/11/mosaic.png');
+    background-size: cover;
     // background-color: $growthx-grey;
     margin: 40px 0;
+    overflow: auto;
 
     &.ri-grid ul li {
         height: 0;
