@@ -160,7 +160,11 @@
               $(quotes[i]).insertBefore( paragraphs[placement] );
           }
         }
+
+
+        //$('.share-menu').insertAfter(".share-btn");
         // JavaScript to be fired on the home page, after the init JS
+
       }
     },
     'community': {

@@ -64,6 +64,12 @@
       <?php endif; ?>
 
     </div>
+    <!-- <div class="share-bar container-fluid">
+      <div class="row">
+      <div class="share-btn col-sm-8 col-sm-offset-2">SHARE</div>
+      </div>
+    </div> -->
+
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>

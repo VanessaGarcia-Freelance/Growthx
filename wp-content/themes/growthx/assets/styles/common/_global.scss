@@ -311,3 +311,33 @@ blockquote {
         
     }
 //}
+
+.share-bar{
+    position: relative;
+
+    .share-btn {
+        border-top: 2px solid $growthx-dkgrey;
+        // height: 80px;
+        padding: 20px;
+        font-size: 18px;
+        @include fontRegular();
+    }
+}
+.share-menu {
+    @include make-sm-column(8);
+    @include make-sm-column-offset(2);
+    border-top: 2px solid $growthx-dkgrey;
+    padding: 20px;
+    // transition: 1s top ease;
+
+    &:before {
+        content: "SHARE ";
+        display: block;
+        font-size: 18px;
+        @include fontRegular();
+        float: left;
+        margin-right: 20px;
+        line-height: 35px;
+
+    }
+}
