@@ -38,9 +38,18 @@ body.join {
 
             h1 {
                 margin-bottom: 0;
+                a{
+                    text-transform:none;
+                }
+            }
+            h1:before{ 
+                   @include accentblock($growthx-blue);
             }
             h2{
                 margin: 0;
+                a{
+                    text-transform:none;
+                }
             }
         }
     }
@@ -53,6 +62,9 @@ body.join {
         &.bgImg {
             color: $white;
             @include textShadow();
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
 
         .heading-content {
@@ -70,12 +82,18 @@ body.join {
                    @include accentblock($black);
                    margin-bottom: 10px;
                 }
+                a{
+                    text-transform:none;
+                }
             }
             h3 {
                 @include fontRegular();
                 font-weight: lighter;
                 font-size: 23px;
                 margin-top: 0;
+                a{
+                    text-transform:none;
+                }
             }
             .border-btn {
                 text-align: center;
@@ -112,6 +130,9 @@ body.join {
 
         h2 {
             font-size: 23px;
+                a{
+                    text-transform:none;
+                }
         }
         .button {
             button {
@@ -130,11 +151,11 @@ body.home {
         margin: 0;
     }
     .lastest-blog-posts {
-        margin-top: -2px;
+        margin-top: -3px;
         // padding-bottom: 40px;
 
         .featured-post {
-            border-bottom: 1px solid $growthx-grey;
+            border-bottom: 3px solid $growthx-grey;
             background: url(../images/growthx-logo.svg) no-repeat 100% center;
             background-size: contain;
             padding-left: 0;
@@ -146,6 +167,9 @@ body.home {
             h2 {
                 font-size: 46px;
                 line-height: 55px;
+                a{
+                    text-transform:none;
+                }
             }
         }
         .post-carousel {
@@ -153,6 +177,9 @@ body.home {
             h2 {
                 font-size: 32px;
                 line-height: 43px;
+                a{
+                    text-transform:none;
+                }
             }
         }
     }
@@ -185,13 +212,23 @@ body.home {
                 h2 {
                     font-size: 65px;
                     @include fontSemiBold();
+                    a{
+                        text-transform:none;
+                    }
                 }
                 h3{
                     font-size: 39px;
+                    a{
+                        text-transform:none;
+                    }
                 }
                 .readmore {
                     a {
-                        color: $growthx-ltgrey
+                        color: $growthx-ltgrey;
+                        &:after {
+                             background: url(../images/white-arrow-right.png) no-repeat;
+                            background-size: 10px; 
+                        }
                     }
                 }
             }
@@ -221,7 +258,7 @@ body.contact {
 
     .locations {
         border-top: 2px solid $growthx-dkgrey;
-        border-bottom: 2px solid $growthx-dkgrey;
+        border-bottom: 0px solid $growthx-dkgrey;
 
         .row {
             .address {
@@ -241,6 +278,12 @@ body.contact {
                     @include fontRegular();
                     font-size: 21px;
                     margin-top: 0;
+                }
+                p{
+                    margin:0;
+                    a{
+                        text-transform:none;
+                    }
                 }
             }
         }
@@ -285,6 +328,19 @@ body.contact {
 
 body.community {
     .main{
+
+        .heading-content{
+            h1{
+                margin-bottom:0px;
+            }
+            h2{
+                margin-top:5px;
+            }
+            p{
+                line-height:1.7em;
+            }
+        }
+
         .membergrid{
             margin: 40px 0;
         }
@@ -301,6 +357,12 @@ body.community {
                        column-gap: 20px;
             }
         }
+        .entry-content{
+            h2{
+                margin-top:5px;
+                margin-bottom:10px;
+            }
+        }
 
         
     }
@@ -314,6 +376,7 @@ body.search {
     }
 }
 
+
 body.single-member {
     >header {
         display:none;
@@ -326,5 +389,13 @@ body.single-member {
     }
     footer {
         display:none;
+    }
+}
+
+body.careers{
+    .page-header.border{
+        div {
+            border: 0px solid #f2f3f1; 
+        }
     }
 }

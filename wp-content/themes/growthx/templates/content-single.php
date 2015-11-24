@@ -30,6 +30,9 @@
       <!-- <h4>Quotes</h4> -->
       <?php 
         //using a for loop for now. Will need to break these into individual blocks then insert them throughout the content.
+
+      if($quotes){
+
         foreach ($quotes as $quote) :
           $quoteStyle = $quote->fields['quote-style'];
       ?>
@@ -46,6 +49,7 @@
         </div>
       <?php  
         endforeach;
+      }
       ?>
 
       <!-- <h4>Gallery</h4> -->
@@ -104,7 +108,8 @@
              </a>
              <div class="perfect-related_by-category">
              <a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
-             <?php echo get_avatar( $post->post_author, 70 ); ?>
+             <?php /*echo get_avatar( $post->post_author, 70 );*/ ?>
+             <?php echo the_post_thumbnail( array(70, 70)  ); ?>
              <?php the_title(); ?></a>
              </div>
             </li>

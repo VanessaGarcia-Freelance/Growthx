@@ -1,7 +1,7 @@
 .membergrid {
     min-height: 500px;
-    background-image: url('http://growthx1.wpengine.com/wp-content/uploads/2015/11/mosaic.png');
-    background-size: cover;
+    //background-image: url('http://growthx1.wpengine.com/wp-content/uploads/2015/11/mosaic.png');
+    //background-size: cover;
     // background-color: $growthx-grey;
     margin: 40px 0;
     overflow: auto;
@@ -21,7 +21,7 @@
         // position: relative;
         cursor: pointer !important;
         
-        filter: grayscale(100%);
+        filter: grayscale(100%) sepia(0%) hue-rotate(107deg) brightness(100%);
         background-color: $growthx-green;
         background-blend-mode: multiply;
         
@@ -31,20 +31,28 @@
         // transition: 0.5s background-color ease !important;
 
         // transition: top 800ms ease 0ms !important;
+          -webkit-transition: .5s ease-in-out; 
+          -moz-transition: .5s ease-in-out; 
+          -o-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
         
 
         &:hover {
-           -webkit-transition: 0.5s -webkit-filter ease !important;
-           -moz-transition: 0.5s -moz-filter ease !important;
-           -o-transition: 0.5s -o-filter ease !important;
-           transition: 0.5s filter ease !important;
-           // filter: sepia(100%) hue-rotate(107deg) brightness(50%);
+          // -webkit-transition: 0.5s -webkit-filter ease !important;
+          // -moz-transition: 0.5s -moz-filter ease !important;
+          // -o-transition: 0.5s -o-filter ease !important;
+          // transition: 0.5s filter ease !important;
+            filter: grayscale(100%) sepia(100%) hue-rotate(107deg) brightness(100%);
            // background-color: $growthx-green;
            // background-blend-mode: multiply;
 
-           filter: grayscale(0%);
+           //filter: grayscale(100%);
 
             
+          -webkit-transition: .5s ease-in-out; 
+          -moz-transition: .5s ease-in-out; 
+          -o-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
 
            .text {
             display: block;

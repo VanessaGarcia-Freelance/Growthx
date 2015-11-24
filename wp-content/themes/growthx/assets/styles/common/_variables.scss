@@ -20,18 +20,18 @@ $black:                 #000000;
 @mixin accentblock($color) {
     content: ' ';
     display:block;
-    width: 40px;
-    height: 12px;
-    border-top: 6px solid rgba($color, 0.4);
+    width: 77px;
+    height: 17px;
+    border-top: 9px solid rgba($color, 0.4);
     background-color: rgba($color, 0.4);
 }
 
 @mixin accentBlockSide($color) {
         content: ' ';
         display:inline-block;
-        width: 12px;
-        height: 40px;
-        border-left: 6px solid rgba($color, 0.4);
+        width: 17px;
+        height: 77px;
+        border-left: 9px solid rgba($color, 0.4);
         background-color: rgba($color, 0.4);
         vertical-align: middle;
         margin: 0 10px;
@@ -50,6 +50,7 @@ $black:                 #000000;
     color: #000;
     padding: 8px 20px;
     display: inline-block;
+    letter-spacing:.15em;
 }
 
 

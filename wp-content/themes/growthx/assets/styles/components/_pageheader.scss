@@ -4,6 +4,9 @@
 
     &.bgImg {
         color: $white;
+        background-size:cover;
+        background-position:center center;
+        background-repeat:no-repeat;
     }
 
     > div {
@@ -25,6 +28,7 @@
         h2 {
             font-weight: lighter;
             font-size: 23px;
+            margin-top:5px;
         }
         .border-btn {
             text-align: center;
@@ -34,10 +38,23 @@
                 border: 2px solid $white;
                 @include fontSemiBold();
                 text-transform: uppercase;
-                font-size: 9px;
+                font-size: 13px;
+                line-height:13px;
                 color: $white;
                 text-align: center;
                 display: inline-block;
+                 -webkit-transition: background-color .5s;
+                transition: background-color .5s;
+                cursor:pointer;
+                cursor:hand;
+                letter-spacing:.15em;
+                margin-top:16px;
+            }
+            a:hover{
+                background:#132bee;
+                border-color:#132bee;
+                 -webkit-transition: background-color .5s;
+                transition: background-color .5s;
             }
         }
     }
@@ -55,8 +72,7 @@
         
         > div {
             @include make-sm-column(12);
-            @include make-sm-column-offset(0);
-            min-height:640px;
+            @include make-sm-column-offset(0); 
         }
 
         h1, h2 {
