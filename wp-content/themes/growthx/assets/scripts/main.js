@@ -205,13 +205,56 @@
         // console.log( 'templateDir:', templateDir );
         var phpRequest = templateDir + '/memberinfo.php';
 
-        
+        function addMemberData(obj){
+          var modal = $('.modal.member');
+
+          $('.modal-image', modal).attr('style', "background-image:url("+obj.Headshot+")");
+          $('.name', modal).html(obj.Name);
+          $('.company', modal).html(obj.Company);
+
+          var links = '';
+
+          if(obj.Email !== '') {
+            links += "<li>" + obj.Email + "</li>";
+          }
+          if(obj.Angellist !== '') {
+            links += "<li>" + obj.Angellist + "</li>";
+          }
+          if(obj.Linkedin !== '') {
+            links += "<li>" + obj.Linkedin + "</li>";
+          }
+          if(obj.Twitter !== '') {
+            links += "<li>" + obj.Twitter + "</li>";
+          }
+          $('.links ul', modal).html(links);
+
+          var bio = '<p>Bio Coming Soon...</p>';
+          if(obj.Bio !== '') {
+            bio = obj.Bio;
+          }
+          $('.bio', modal).html(bio);
+
+
+          showModal();
+        }
+
+        function showModal(currentModal) {
+          var modal = $('.modal.member');
+
+          modal.show();
+          $('.overlay').show();
+          $('.close', modal).on('click', function (){
+            $(modal).hide();
+            $('.overlay').hide();
+          });
+        }
+
         //wouldn't work unless I wrapped it in an load function.
         $(window).load(function(){
           $('.member.bio-modal').on('click', function(evt){
             evt.preventDefault();
             console.log( 'show bio - id:', $(this).attr('href') );
-            var memberId = $(this).attr('href');
+            var memberId = $(this).attr('data-url');
 
             $.ajax({
               type: "POST",
@@ -219,7 +262,7 @@
               dataType:"json",
               data:{action: memberId},
               success:function(json) {
-               // console.log(json);
+                console.log(json);
                 addMemberData(json);
               },
               error: function(json){
@@ -229,49 +272,9 @@
 
           });
 
-          function addMemberData(obj){
-            var modal = $('.modal.member');
-
-            $('.modal-image', modal).attr('style', "background-image:url("+obj.Headshot+")");
-            $('.name', modal).html(obj.Name);
-            $('.company', modal).html(obj.Company);
-
-            var links = '';
-
-            if(obj.Email !== '') {
-              links += "<li>" + obj.Email + "</li>";
-            }
-            if(obj.Angellist !== '') {
-              links += "<li>" + obj.Angellist + "</li>";
-            }
-            if(obj.Linkedin !== '') {
-              links += "<li>" + obj.Linkedin + "</li>";
-            }
-            if(obj.Twitter !== '') {
-              links += "<li>" + obj.Twitter + "</li>";
-            }
-            $('.links ul', modal).html(links);
-
-            var bio = '<p>Bio Coming Soon...</p>';
-            if(obj.Bio !== '') {
-              bio = obj.Bio;
-            }
-            $('.bio', modal).html(bio);
-
-
-            showModal();
-          }
-
-          function showModal(currentModal) {
-            var modal = $('.modal.member');
-
-            modal.show();
-            $('.overlay').show();
-            $('.close', modal).on('click', function (){
-              $(modal).hide();
-              $('.overlay').hide();
-            });
-          }
+          $('.f-story').on('click', function(evt){
+            evt.stopPropagation();
+          });
 
         });
       }

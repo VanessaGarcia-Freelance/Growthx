@@ -14,8 +14,8 @@
       $fieldArray = array( "user_id" => $recent["ID"] );
       $headshot = types_render_field( "headshot", array( "url" => "true", "proportional" => "true" ) );
       $parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'growthx-company');
-      $targetUrl = get_the_ID(); //get_permalink(); 
-      $class = 'bio-modal';
+      $targetUrl = '#';//get_the_ID(); //get_permalink(); 
+      $memberId = get_the_ID(); //'bio-modal';
 
       if(!empty($parent_id)) {
           $founderStory = types_render_field("founder-story", array( "post_id" => $parent_id, "show_name" => true, 'checked'=>true));
@@ -27,7 +27,7 @@
       }
     ?>
     <li>
-      <a class="member <?php echo $class; ?>" href="<?php echo $targetUrl; ?>">
+      <a class="member bio-modal" data-url="<?php echo $memberId; ?>" href="<?php echo $targetUrl; ?>">
         <img src="<?php printf($headshot);  ?>"/>
         <div class="text">
 
