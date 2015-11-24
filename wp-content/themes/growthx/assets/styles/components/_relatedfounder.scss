@@ -1,0 +1,40 @@
+.related-founders {
+    .posts-container {
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+        .post {
+            height: 120px;
+            .img {
+                height: 53px;
+                width: 53px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                float: left;
+                filter: grayscale(100%);
+            }
+            h2 {
+                margin-top: 0;
+
+                a {
+                    color: $growthx-grey;
+                    font-size: 19px; //intentionally made this a bit smaller
+                    // line-height: 31px;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    
+
+    } 
+}
+
+body.single-growthx-company {
+    .posts-container {
+        border-bottom: 2px solid $growthx-ltgrey;
+    }
+}

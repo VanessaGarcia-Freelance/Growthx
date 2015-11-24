@@ -82,7 +82,7 @@
       </div>
       <?php endif; ?>
 
-      <!-- founder story blocks go here -->
+      <?php get_template_part('templates/content', 'relatedfounder'); ?>
 
       <div class="community-forward">
           <a href="/community">LEARN MORE ABOUT THE COMMUNITY</a>
