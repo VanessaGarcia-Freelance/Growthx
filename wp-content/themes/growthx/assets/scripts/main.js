@@ -68,8 +68,6 @@
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
         
-
-
         function resizeHeader () {
           console.log('height');
 
@@ -98,7 +96,7 @@
 
       },
       finalize: function() {
-        console.log('join page');
+        //console.log('join page');
 
         $("form button" ).wrap( "<div class='button'></div>" );
 
@@ -161,18 +159,10 @@
           }
         }
 
-
-        //$('.share-menu').insertAfter(".share-btn");
-        // JavaScript to be fired on the home page, after the init JS
-
       }
     },
     'community': {
       init: function() {
-
-      },
-      finalize: function() {
-        console.log('community');
 
         $( '.membergrid' ).gridrotator( {
           rows : 4,
@@ -203,15 +193,81 @@
           preventClick    : false,
         } );
 
-        // $('.member').click(function(evt){
-        //   evt.preventDefault();
-        //   console.log('member');
-        // });
+      },
+      finalize: function() {
+        // console.log('community');
+        // console.log( 'templateDir:', templateDir );
+        var phpRequest = templateDir + '/memberinfo.php';
 
-        // $( "a" ).click(function( event ) {
-        //   event.preventDefault();
-        //   console.log('a');
-        // });
+        
+        //wouldn't work unless I wrapped it in an load function.
+        $(window).load(function(){
+          $('.member.bio-modal').on('click', function(evt){
+            evt.preventDefault();
+            console.log( 'show bio - id:', $(this).attr('href') );
+            var memberId = $(this).attr('href');
+
+            $.ajax({
+              type: "POST",
+              url: phpRequest, //memberId,
+              dataType:"json",
+              data:{action: memberId},
+              success:function(json) {
+               // console.log(json);
+                addMemberData(json);
+              },
+              error: function(json){
+                console.log(json);
+              }
+            });
+
+          });
+
+          function addMemberData(obj){
+            var modal = $('.modal.member');
+
+            $('.modal-image', modal).attr('style', "background-image:url("+obj.Headshot+")");
+            $('.name', modal).html(obj.Name);
+            $('.company', modal).html(obj.Company);
+
+            var links = '';
+
+            if(obj.Email !== '') {
+              links += "<li>" + obj.Email + "</li>";
+            }
+            if(obj.Angellist !== '') {
+              links += "<li>" + obj.Angellist + "</li>";
+            }
+            if(obj.Linkedin !== '') {
+              links += "<li>" + obj.Linkedin + "</li>";
+            }
+            if(obj.Twitter !== '') {
+              links += "<li>" + obj.Twitter + "</li>";
+            }
+            $('.links ul', modal).html(links);
+
+            var bio = '<p>Bio Coming Soon...</p>';
+            if(obj.Bio !== '') {
+              bio = obj.Bio;
+            }
+            $('.bio', modal).html(bio);
+
+
+            showModal();
+          }
+
+          function showModal(currentModal) {
+            var modal = $('.modal.member');
+
+            modal.show();
+            $('.overlay').show();
+            $('.close', modal).on('click', function (){
+              $(modal).hide();
+              $('.overlay').hide();
+            });
+          }
+
+        });
       }
     }
   };

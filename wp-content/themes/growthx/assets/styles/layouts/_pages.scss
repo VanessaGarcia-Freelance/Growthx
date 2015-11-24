@@ -313,3 +313,18 @@ body.search {
         margin-top: 100px;
     }
 }
+
+body.single-member {
+    >header {
+        display:none;
+    }
+    .page-header {
+        display: none;
+    }
+    .newsletter-signup {
+        display: none;
+    }
+    footer {
+        display:none;
+    }
+}
