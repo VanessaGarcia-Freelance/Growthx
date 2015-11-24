@@ -42,6 +42,9 @@ body.join {
                     text-transform:none;
                 }
             }
+            h1:before{ 
+                   @include accentblock($growthx-blue);
+            }
             h2{
                 margin: 0;
                 a{
