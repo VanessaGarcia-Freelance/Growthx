@@ -22,7 +22,7 @@
 
           if(!empty($founderStory)){
             $targetUrl = get_permalink($parent_id);
-            $class = '';
+            //$class = '';
           }
       }
     ?>

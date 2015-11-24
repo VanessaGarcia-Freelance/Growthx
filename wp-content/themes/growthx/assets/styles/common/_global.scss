@@ -159,6 +159,10 @@ nav.navmenu {
             }
         }
     }
+    &.quote-border{
+        border:5px solid #f2f3f1;
+        margin:40px 20px;
+    }
 }
 
 blockquote {
@@ -167,7 +171,7 @@ blockquote {
     line-height: 31px;
     padding: 0;
     &.right {
-            @include make-sm-column(5);
+            @include make-sm-column(6);
             @include make-sm-column-offset(1);
             padding-right: 40px;
 
@@ -184,9 +188,44 @@ blockquote {
         }
         //pulled to the right
         &.left{
-            @include make-sm-column(5);
-            @include make-sm-column-offset(6)
+            @include make-sm-column(6);
+            @include make-sm-column-offset(4)
             padding-left: 40px;
+
+            &:before {
+                @include accentBlockSide($growthx-blue);
+                display: block;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    &.border-right {
+             margin: 40px auto;
+            max-width: 1170px;
+            position: relative;
+            width: 60%;
+            padding-right: 50px;
+
+            &:after {
+                @include accentBlockSide($growthx-green);
+                display: block;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            text-align: right;
+            
+        }
+        //pulled to the right
+        &.border-left{ 
+             margin: 40px auto;
+            max-width: 1170px;
+            position: relative;
+            width: 60%;
+            padding-left: 50px;
 
             &:before {
                 @include accentBlockSide($growthx-blue);

@@ -29,7 +29,7 @@
         foreach ($quotes as $quote) :
           $quoteStyle = $quote->fields['quote-style'];
       ?>
-        <div class="row quote">
+        <div class="row quote <?php if($quote->fields['quote-style'] == 'border-left' || $quote->fields['quote-style'] == 'border-right'){echo 'quote-border';}  ?>" data-position="<?php echo $quote->fields['position'] ?>">
             <blockquote class="<?php echo $quote->fields['quote-style'] ?>">
           <?php
             // will set this later to a class name
@@ -81,7 +81,13 @@
 
       </div>
       <?php endif; ?>
-    
+
+      <!-- founder story blocks go here -->
+
+      <div class="community-forward">
+          <a href="/community">LEARN MORE ABOUT THE COMMUNITY</a>
+      </div>
+
     </div> 
     
     <footer>

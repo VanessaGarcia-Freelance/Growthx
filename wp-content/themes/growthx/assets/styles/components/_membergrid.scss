@@ -94,12 +94,13 @@
 
         .modal-image {
             padding-left: 0;
-            height: 145px;
+            height: 212px;
             width: 145px;
             float: left;
             margin-right: 20px;
             background-size: cover;
-
+            background-position:center center;
+            filter:grayscale(100%) sepia(100%) hue-rotate(107deg) brightness(100%);
             img {
                 width: 100%;
                 height: 100%;

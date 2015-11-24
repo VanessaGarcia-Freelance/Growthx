@@ -148,12 +148,18 @@
         if(gallery) {
           var galplacement = Math.floor(paragraphs.length / 2);
           //console.log('gal galplacement', galplacement);
-          $(gallery).insertBefore(paragraphs[galplacement]);
+          //$(gallery).insertBefore(paragraphs[galplacement]);
+          //always place after 2nd paragraph
+          $(gallery).insertBefore(paragraphs[2]);
         }
 
         if(quotes.length > 0) {
-          for (i = 0; i < quotes.length; i++) { 
-              var placement = skip*i;
+          for (i = 0; i < quotes.length; i++) {  
+              if($(quotes[i]).data('position') != ''){
+                var placement = $(quotes[i]).data('position') - 1;
+              }else{
+                var placement = skip*i;
+              }
               //console.log('placement ', placement);
               $(quotes[i]).insertBefore( paragraphs[placement] );
           }
