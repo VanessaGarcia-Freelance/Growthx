@@ -38,7 +38,7 @@
                 border: 2px solid $white;
                 @include fontSemiBold();
                 text-transform: uppercase;
-                font-size: 9px;
+                font-size: 13px;
                 color: $white;
                 text-align: center;
                 display: inline-block;
@@ -46,6 +46,8 @@
                 transition: background-color .5s;
                 cursor:pointer;
                 cursor:hand;
+                letter-spacing:.15em;
+                margin-top:16px;
             }
             a:hover{
                 background:#132bee;

@@ -143,6 +143,11 @@ body.blog {
     
 }
 .single {
+
+    header{ 
+        filter: grayscale(100%);
+    }
+
     .related-posts {
         background-color: $growthx-ltgrey;
 
