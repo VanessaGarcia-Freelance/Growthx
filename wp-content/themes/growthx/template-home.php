@@ -16,8 +16,44 @@
   <!-- LATEST BLOG POSTS -->
   <div class="lastest-blog-posts container-fluid">
     <div class="featured-post col-sm-offset-1 col-sm-10">
+
+            <?php 
+              //grab all posts
+              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => -1 );
+
+              //Define the loop based on arguments
+              $loop = new WP_Query( $args );
+              $active = ' active';
+              $entry = 0;
+             
+            //loop through entries
+            while ( $loop->have_posts() ) : $loop->the_post();
+              $fieldArray = array( "user_id" => $recent["ID"] );
+              $founderStory = types_render_field( "founder-story", $fieldArray );
+
+              //if entry has a founder story and there is less than 3 slides created
+              if(!empty($founderStory) && $entry < 3) :
+                $headerText = types_render_field( "header-text", $fieldArray );
+                $headerImage = types_render_field( "header-image", array( "url" => "true", "proportional" => "true" ) );
+                 if($post->post_name == 'growthx'){
+                ?>
+                  <div class="col-sm-7">
+                          <h2><a href="<?php the_permalink(); ?>"><?php printf($headerText);  ?></a></h2>
+                          <p class="readmore"><a href="<?php the_permalink(); ?>">Read Our Story</a></p>
+                    </div>
+                <?php
+                  } 
+              endif;
+            ?>
+            
+          <?php 
+            $active = '';
+            endwhile;
+          ?>
+
+      <!-- disabling recent posts for GrowthX Founder story -->
       <?php
-          $args = array( 'numberposts' => '1', 'orderby' => 'post_date',
+          /*$args = array( 'numberposts' => '1', 'orderby' => 'post_date',
     'order' => 'ASC' );
           $recent_posts = wp_get_recent_posts( $args );
           foreach( $recent_posts as $recent ){
@@ -26,7 +62,7 @@
               echo '<h2><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></h2> ';
               echo '<p class="readmore"><a href="' . get_permalink($recent["ID"]) . '">Read Our Blog</a></p>';
               echo '</div>';
-          }
+          }*/
       ?>
     </div>
 
