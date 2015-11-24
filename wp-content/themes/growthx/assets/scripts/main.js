@@ -98,6 +98,16 @@
       finalize: function() {
         //console.log('join page');
 
+        function toggleForm(currentModal) {
+          console.log( 'currentModal:', currentModal  );
+          $(currentModal).show();
+          $('.overlay').show();
+          $('.close', currentModal).on('click', function (){
+            $(currentModal).hide();
+            $('.overlay').hide();
+          });
+        }
+
         $("form button" ).wrap( "<div class='button'></div>" );
 
         $('button.company').on('click', function () {
@@ -108,15 +118,6 @@
         });
 
 
-        function toggleForm(currentModal) {
-          console.log( 'currentModal:', currentModal  );
-          $(currentModal).show();
-          $('.overlay').show();
-          $('.close', currentModal).on('click', function (){
-            $(currentModal).hide();
-            $('.overlay').hide();
-          });
-        }
       }
     },
     'contact': {
@@ -155,10 +156,11 @@
 
         if(quotes.length > 0) {
           for (i = 0; i < quotes.length; i++) {  
-              if($(quotes[i]).data('position') != ''){
-                var placement = $(quotes[i]).data('position') - 1;
+              var placement = '';
+              if($(quotes[i]).data('position') !== ''){
+                placement = $(quotes[i]).data('position') - 1;
               }else{
-                var placement = skip*i;
+                placement = skip*i;
               }
               //console.log('placement ', placement);
               $(quotes[i]).insertBefore( paragraphs[placement] );
@@ -205,6 +207,18 @@
         // console.log( 'templateDir:', templateDir );
         var phpRequest = templateDir + '/memberinfo.php';
 
+
+        function showModal(currentModal) {
+          var modal = $('.modal.member');
+
+          modal.show();
+          $('.overlay').show();
+          $('.close', modal).on('click', function (){
+            $(modal).hide();
+            $('.overlay').hide();
+          });
+        }
+
         function addMemberData(obj){
           var modal = $('.modal.member');
 
@@ -238,16 +252,6 @@
           showModal();
         }
 
-        function showModal(currentModal) {
-          var modal = $('.modal.member');
-
-          modal.show();
-          $('.overlay').show();
-          $('.close', modal).on('click', function (){
-            $(modal).hide();
-            $('.overlay').hide();
-          });
-        }
 
         //wouldn't work unless I wrapped it in an load function.
         $(window).load(function(){
