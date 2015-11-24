@@ -36,7 +36,7 @@
         foreach ($quotes as $quote) :
           $quoteStyle = $quote->fields['quote-style'];
       ?>
-        <div class="row quote">
+        <div class="row quote <?php if($quote->fields['quote-style'] == 'border-left' || $quote->fields['quote-style'] == 'border-right'){echo 'quote-border';}  ?>" data-position="<?php echo $quote->fields['position'] ?>">
             <blockquote class="<?php echo $quote->fields['quote-style'] ?>">
           <?php
             // will set this later to a class name

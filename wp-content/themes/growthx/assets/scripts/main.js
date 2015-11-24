@@ -141,6 +141,7 @@
         //console.log('founder story / blog');
 
         var paragraphs = $('.entry-content p'),
+            wpcaption = $('.wp-caption'),
             quotes = $('.quote'),
             skip = Math.round(paragraphs.length / quotes.length),
             gallery = $('.gallery-container');
@@ -157,14 +158,26 @@
         if(quotes.length > 0) {
           for (i = 0; i < quotes.length; i++) {  
               var placement = '';
-              if($(quotes[i]).data('position') !== ''){
-                placement = $(quotes[i]).data('position') - 1;
-              }else{
+              if($(quotes[i]).data('position') === ''){
                 placement = skip*i;
+              }else{
+                placement = $(quotes[i]).data('position') - 1;
               }
               //console.log('placement ', placement);
               $(quotes[i]).insertBefore( paragraphs[placement] );
           }
+        }
+
+        if(wpcaption.length > 0) {
+            var height = '';
+            var width = '';
+          for (i = 0; i < wpcaption.length; i++) {  
+                height = $(wpcaption[i] + ' img').height() - 40;
+                width = $(wpcaption[i]).width() - 40;
+                $(wpcaption[i]).append('<div class="inset-border" style="height:'+height+'px;width:'+width+'px"></div>');
+
+          }
+
         }
 
       }
