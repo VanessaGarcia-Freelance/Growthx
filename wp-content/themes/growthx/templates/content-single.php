@@ -30,6 +30,9 @@
       <!-- <h4>Quotes</h4> -->
       <?php 
         //using a for loop for now. Will need to break these into individual blocks then insert them throughout the content.
+
+      if($quotes){
+
         foreach ($quotes as $quote) :
           $quoteStyle = $quote->fields['quote-style'];
       ?>
@@ -46,6 +49,7 @@
         </div>
       <?php  
         endforeach;
+      }
       ?>
 
       <!-- <h4>Gallery</h4> -->
