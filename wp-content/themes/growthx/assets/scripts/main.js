@@ -237,8 +237,17 @@
 
         function addMemberData(obj){
           var modal = $('.modal.member');
+          var useimage = obj.Headshot;
+          if(obj.Wideimage){ 
+            useimage = obj.Wideimage;
+            $('.modal-image', modal).attr('style', "background-image:url("+useimage+")");
+            $('.modal-header', modal).addClass('wide');
+          }else{
+             $('.modal-image', modal).attr('style', "background-image:url("+useimage+")");
+            $('.modal-header', modal).removeClass('wide');
+          }
 
-          $('.modal-image', modal).attr('style', "background-image:url("+obj.Headshot+")");
+          
           $('.name', modal).html(obj.Name);
           $('.company', modal).html(obj.Company);
 

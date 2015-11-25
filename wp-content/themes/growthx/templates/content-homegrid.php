@@ -1,5 +1,9 @@
 
 <?php
+
+// rita, max, derek, dominic, thatcher --> no company name or name?
+// swicth max and thatcher? but crop max
+
 $headshots = array(
   1 => array (
     "name" => "Scott Levy",

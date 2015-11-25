@@ -415,6 +415,13 @@ body.search {
     .main {
         margin-top: 0;
     }
+    .search-container{
+        text-align:center;
+        form{
+            display:inline-block;
+            margin:20px auto;
+        }
+    }
 }
 
 

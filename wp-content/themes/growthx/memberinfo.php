@@ -8,6 +8,8 @@
 
 //Headshot URL
     $profileImg = types_render_field( "headshot", array( "post_id" => $memberID, "url" => true ) );
+//WideImage URL
+    $wideImage = types_render_field( "wide-image", array( "post_id" => $memberID, "url" => true ) );
 //Name (Title)
     $title = $post->post_title;
 
@@ -32,6 +34,7 @@
    
    $memberInfo = array(
         "Headshot"   => $profileImg,
+        "Wideimage"  => $wideImage,
         "Name"       => $title,
         "Company"    => $company,
         "Email"      => $email,

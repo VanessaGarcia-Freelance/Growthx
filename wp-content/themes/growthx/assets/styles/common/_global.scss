@@ -250,18 +250,18 @@ blockquote {
     bottom: auto;
 
     .close {
-        margin-top: -12px;
+        margin-top: -20px;
         color: white;
         opacity: 1;
-        font-size: 9px;
+        font-size: 1em;
         text-transform: uppercase;
         text-shadow: none;
 
         &:after {
             content: '';
             background-image: url('../images/white-x.png');
-            width: 10px;
-            height: 10px;
+            width: 14px;
+            height: 16px;
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;

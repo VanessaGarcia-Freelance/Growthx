@@ -4,10 +4,10 @@
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>
   </div>
-  <div class="container">
+<?php endif; ?>
+  <div class="container search-container">
   		<?php get_search_form(); ?>
 	</div>
-<?php endif; ?>
 
 <div class="col-sm-8 col-sm-offset-2">
 <?php while (have_posts()) : the_post(); ?>
