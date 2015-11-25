@@ -250,12 +250,24 @@ blockquote {
     bottom: auto;
 
     .close {
-        margin-top: -10px;
+        margin-top: -12px;
         color: white;
         opacity: 1;
         font-size: 9px;
         text-transform: uppercase;
         text-shadow: none;
+
+        &:after {
+            content: '';
+            background-image: url('../images/white-x.png');
+            width: 10px;
+            height: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+            margin-left: 3px;
+            vertical-align: bottom;
+        }
     }
 
     .modal-container {

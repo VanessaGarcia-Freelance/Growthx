@@ -49,7 +49,7 @@
 
 <div class="modal member">
   <div class="modal-container container-fluid">
-    <div class="close">Close x</div>
+    <div class="close">Close</div>
     <div class="modal-header col-sm-12">
       <div class="modal-image">
       </div>
