@@ -73,8 +73,8 @@ body.single {
                 float: none;
                 width: 60%;
                 margin: 20px auto;
-                line-height: 23px;
-                font-size:1.3em;
+                line-height: 1.7em;
+                font-size:1.2em;
             }
 
             .gallery-container {
@@ -89,7 +89,7 @@ body.single {
                     > div {
                         height: 100%;
                         width: 100%;
-                        background-color: rgba($growthx-dkgrey, .8);
+                        background-color: rgba($growthx-dkgrey, .5);
 
                         .caption-container {
                             display: table;

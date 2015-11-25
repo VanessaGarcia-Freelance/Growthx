@@ -52,9 +52,13 @@
             color: $white;
             @include textShadow ();
             filter: brightness(100%);
+            &.bottomrow{
+                bottom:20px;
+            }
 
             .name {
                 @include fontSemiBold();
+                margin-bottom:0px;
             }
             .f-story {
                 &:hover {

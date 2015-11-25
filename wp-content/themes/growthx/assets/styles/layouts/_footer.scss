@@ -4,7 +4,7 @@ footer {
             a {
                 padding: 15px 10px;
                 @include fontSemiBold();
-                font-size: 9px;
+                font-size: 1em;
                 letter-spacing: 0.15em;
 
                 &:hover {
@@ -19,9 +19,9 @@ footer {
     }
     .copyright {
         @include fontSemiBold();
-        padding: 18px 5px;
+        padding: 1.2em 5px;
         font-style:italic;
-        font-size: 11px;
+        font-size: 1em;
     }
     .navbar-brand{
         height: auto;

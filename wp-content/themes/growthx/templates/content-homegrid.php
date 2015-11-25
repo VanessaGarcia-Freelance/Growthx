@@ -146,8 +146,8 @@ $headshots = array(
     <li>
       <a class="member" href="/community">
         <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/grid-'.$i.'.jpg';?>" />
-        <div class="text">
-          <p class="name"><?php echo $headshots[$i]['name']; ?></p> 
+        <div class="text <?php if($i > 24){ echo 'bottomrow'; } ?>">
+          <p class="name"><?php echo $headshots[$i]['name']; ?><br /><?php echo $headshots[$i]['company']; ?></p> 
         </div>
       </a>
     </li>

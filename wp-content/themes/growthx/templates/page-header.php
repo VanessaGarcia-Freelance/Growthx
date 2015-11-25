@@ -23,7 +23,7 @@
   <div>
     <div class="heading-content">
     <!-- <h1><?php //echo get_the_ID(); ?> </h1> -->
-      <h1><?php print_r($pageHeadline); ?></h1>
+      <h1><?php print_r($pageHeadline); if(is_search()){?><?= Titles\title(); ?><?php } ?></h1>
       <h2><?php print_r($pageSubheading); ?></h2>
       <p><?php print_r($pageHeaderContent); ?></p>
       <?php 

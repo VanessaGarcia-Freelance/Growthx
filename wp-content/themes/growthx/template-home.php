@@ -115,7 +115,7 @@
                   <div class="story-entry " style="background-image: url( <?php printf($headerImage);  ?> );">
                     <div class="col-sm-12 border">
                       <div> 
-                        <div class="col-sm-6 col-sm-offset-6">
+                        <div class="col-sm-5 col-sm-offset-6">
                           <h2><?php the_title(); ?></h2>
                           <h3><?php printf($headerText);  ?></h3>
                           <p class="readmore"><a href="<?php the_permalink() ?>">Read the Founder Story</a></p>

@@ -128,7 +128,7 @@ body.join {
                 float: right;
                 width: 162px;
                 text-align: center;
-                padding: 10px 0;
+                padding: 10px 0; 
             }
         }
     }
@@ -376,6 +376,7 @@ body.community {
             }
             p{
                 line-height:1.7em;
+                font-size:1.1em;
             }
         }
 
@@ -386,6 +387,8 @@ body.community {
         .content {
             margin: 40px;
             .col-wrap{
+                font-size:1.2em;
+
                -webkit-column-count: 2;
                   -moz-column-count: 2;
                        column-count: 2;
@@ -410,7 +413,7 @@ body.community {
 
 body.search {
     .main {
-        margin-top: 100px;
+        margin-top: 0;
     }
 }
 
