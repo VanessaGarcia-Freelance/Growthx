@@ -470,3 +470,12 @@ blockquote {
         }
     }  
 }
+
+
+.accent-top {
+    &:before{
+        @include accentblock($black);
+        margin-bottom: 10px;
+    }
+    
+}
