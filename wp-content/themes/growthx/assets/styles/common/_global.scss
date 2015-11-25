@@ -399,3 +399,74 @@ blockquote {
 
     }
 }
+
+
+.newsletter-block {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: $white;
+    margin-top: 20px;
+    margin-left: -13.333333%;
+    width: 126%;
+    float:left;
+    position: relative;
+
+    h2 {
+        @include fontSemiBold();
+        font-size: 39px;
+        margin-bottom: 0;
+        
+        &:before {
+             @include accentblock($white);
+             margin-bottom: 10px;
+        }
+    }
+    h3 {
+        @include fontRegular();
+        font-size: 21px;
+        margin-top: 0;
+    }
+
+    form {
+        > div:first-child {
+            display: none;
+        }
+        .col-sm-6 {
+            padding: 0;
+            input{
+                float: left;
+                margin-right: 10px;
+                background: transparent;
+                border: 2px solid white;
+                color: white;
+                width: 70%;
+
+                &::-webkit-input-placeholder {
+                   color: white;
+                }
+            }
+        }
+
+    }
+
+    .mc4wp-alert, .yikes-easy-mc-success-message {
+        margin-left: 0;
+        margin-top: 16px;
+        max-width: 721px;
+    }
+}
+
+.page-header {
+    .newsletter-block {
+        padding: 0;
+        margin-left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+
+        p{
+            @include fontRegular();
+            font-size: 11px;
+        }
+    }  
+}

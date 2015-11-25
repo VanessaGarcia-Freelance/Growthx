@@ -203,10 +203,9 @@ body.home {
         .story-entry {
             height: 648px;
             background-size: cover;
-            //filter: grayscale(100%) sepia(100%) hue-rotate(107deg) brightness(90%);
             background-color: $growthx-green;
             background-blend-mode: multiply;
-            
+
             .border {
                 display: table;
                 // width: 100%;
