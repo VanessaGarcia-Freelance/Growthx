@@ -20,7 +20,7 @@ $black:                 #000000;
 @mixin accentblock($color) {
     content: ' ';
     display:block;
-    width: 77px;
+    width: 50px;
     height: 17px;
     border-top: 9px solid rgba($color, 0.4);
     background-color: rgba($color, 0.4);

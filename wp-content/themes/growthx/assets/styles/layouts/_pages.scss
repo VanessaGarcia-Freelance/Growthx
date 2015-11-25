@@ -43,7 +43,7 @@ body.join {
                 }
             }
             h1:before{ 
-                   @include accentblock($growthx-blue);
+                   @include accentblock($white);
             }
             h2{
                 margin: 0;
@@ -65,6 +65,15 @@ body.join {
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
+
+            .heading-content {
+                h2 {
+                    &:before {
+                       @include accentblock($growthx-blue);
+                       margin-bottom: 10px;
+                    }
+                }
+            }
         }
 
         .heading-content {
