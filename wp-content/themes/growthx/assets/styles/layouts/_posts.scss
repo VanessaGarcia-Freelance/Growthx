@@ -162,6 +162,19 @@ body.blog {
         transition: border .2s ease-in-out;
         text-align: center;
 
+        &.alignnone{
+            .wp-caption-text {
+                padding: 9px;
+                position: absolute;
+                top: 20%;
+                left: 70px;
+                color: #ffffff;
+                width: 40%;
+                text-align: left;
+                @include fontSemiBold();
+            }
+        }
+
         img{ 
             filter: grayscale(100%) sepia(100%) hue-rotate(107deg) brightness(90%);
         }

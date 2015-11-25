@@ -172,11 +172,14 @@
             var height = '';
             var width = '';
           for (i = 0; i < wpcaption.length; i++) {  
-                height = $(wpcaption[i] + ' img').height() - 40;
+                height = $(wpcaption[i]).find('img').height() - 40;
                 width = $(wpcaption[i]).width() - 40;
                 $(wpcaption[i]).append('<div class="inset-border" style="height:'+height+'px;width:'+width+'px"></div>');
-
+                $('.wp').height();
           }
+          $( ".wp-caption" ).each(function() { 
+            $( this ).find('.inset-border').height( $(this).find('img').height() - 40 );
+          });
 
         }
 
