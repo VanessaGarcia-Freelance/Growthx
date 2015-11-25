@@ -256,6 +256,32 @@ body.contact {
         }
     }
 
+    .social{
+        .navbar-nav {
+            li {
+                 a {
+                    padding-left: 7px;
+                    padding-right: 7px;
+
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-image: url(../images/triple-arrow.png);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        height: 20px;
+                        width: 26px;
+                        margin-top: 7px;
+                        margin-left: 6px;
+
+                    }
+                }
+            }
+        }
+    } 
+    
+
     .locations {
         border-top: 2px solid $growthx-dkgrey;
         border-bottom: 0px solid $growthx-dkgrey;

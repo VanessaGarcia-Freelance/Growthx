@@ -8,7 +8,7 @@
   <?php get_template_part('templates/page', 'header'); ?>
 
   <div class="social container-fluid">
-    <div class="col-sm-12">
+    <div class="col-sm-10 col-sm-offset-1">
     <?php
         if (has_nav_menu('social')) :
           wp_nav_menu(['theme_location' => 'social', 'menu_class' => 'nav navbar-nav']);
