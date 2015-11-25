@@ -15,14 +15,17 @@
       <div>
         <div class="col-sm-6 col-sm-offset-1">
           <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php //get_template_part('templates/entry-meta'); ?>
         </div>
       </div>
     </header>
 
-    <!-- <div class="meta">
-    <?php //echo get_avatar( $post->post_author, 46 ); ?>
-    </div> -->
+    <div class="meta-bar">
+    <div class="back-to-blog col-sm-offset-1"><a href="/blog"> < Back to Blog</a></div>
+    <div class="meta col-sm-4 col-sm-offset-4">
+      <?php echo get_avatar( $post->post_author, 52 ); ?>
+      <?php get_template_part('templates/entry-meta'); ?>
+    </div>
+    </div>
 
      <div class="entry-content">
       <?php the_content(); ?>
