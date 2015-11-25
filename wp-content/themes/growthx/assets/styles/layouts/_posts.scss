@@ -1,4 +1,8 @@
 body.blog {
+    .page-header.bgImg {
+        background-color: $growthx-green;
+        background-blend-mode: multiply;
+    }
     .heading-content {
         // background-color: $growthx-dkgrey;
         // display: none;
