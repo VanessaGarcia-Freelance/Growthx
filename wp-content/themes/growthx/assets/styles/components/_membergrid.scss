@@ -68,6 +68,9 @@
 
 .modal.member {
     display: none;
+    position: fixed;
+    top: 10%;
+
     .modal-header {
         text-align: left;
         background-color: $black;
@@ -131,6 +134,8 @@
         .bio {
             margin-top: 20px;
             margin-bottom: 40px;
+            overflow-y: scroll;
+            max-height: 300px;
 
             p {
                 font-size: 11px;
