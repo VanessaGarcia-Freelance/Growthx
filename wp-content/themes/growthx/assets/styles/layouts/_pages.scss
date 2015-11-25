@@ -195,12 +195,6 @@ body.home {
 
     .latest-founder-story {
         color: $white;
-        
-        // height: 704px;
-
-        // .carousel-control {
-        //     color: $black !important;
-        // }
 
         .founder-carousel {
             height: 100%;
@@ -223,6 +217,13 @@ body.home {
                     @include fontSemiBold();
                     a{
                         text-transform:none;
+                    }
+                    &:after {
+                        content: ' ';
+                        display:block;
+                        width: 23px;
+                        height: 3px;
+                        background-color: white;
                     }
                 }
                 h3{
