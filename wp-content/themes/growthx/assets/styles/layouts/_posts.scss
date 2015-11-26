@@ -217,10 +217,13 @@ body.blog {
         }
 
         img{ 
+            filter: none;
+        }
+        img.filter{ 
             filter: grayscale(100%) sepia(100%) hue-rotate(107deg) brightness(90%);
         }
         img.wide{ 
-            filter: none;
+            
         }
 
         .inset-border{
