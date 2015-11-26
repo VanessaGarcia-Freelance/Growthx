@@ -85,10 +85,8 @@ $headshots = array(
     "img" => "grid-14"
   ),
   15=> array (
-  //  "name" => "Max Lock",
-   // "company" => "Fleet",
-    "name" => " ",
-    "company" => " ",
+    "name" => "Max Lock",
+    "company" => "Fleet", 
     "img" => "grid-15"
   ),
   16=> array (
