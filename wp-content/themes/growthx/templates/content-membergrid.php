@@ -35,9 +35,9 @@
           <?php 
             if (!empty($founderStory)) :
               $parent_url = get_permalink($parent_id); ?>
-            <p class="f-story">View Founder Story</p>
+            <p class="f-story">Founder Story</p>
           <?php else: ?>
-            <p class="f-story">Read Bio</p>
+            <p class="f-story">Bio</p>
           <?php endif; ?>
         </div>
       </a>
