@@ -129,6 +129,15 @@ body.join {
                 width: 162px;
                 text-align: center;
                 padding: 10px 0; 
+
+                    &:hover {
+                        background-color:$growthx-blue;
+                        color:#ffffff;
+                        border-color:$growthx-blue;
+                        a{
+                            color:#ffffff;
+                        }
+                    }
             }
         }
     }
@@ -148,6 +157,14 @@ body.join {
                 width: 162px;
                 text-align: center;
                 padding: 10px 0;
+                    &:hover {
+                        background-color:$growthx-blue;
+                        color:#ffffff;
+                        border-color:$growthx-blue;
+                        a{
+                            color:#ffffff;
+                        }
+                    }
             }
         }
     }
@@ -358,6 +375,12 @@ body.contact {
                 a {
                     @include fontSemiBold();
                     @include buttonOutline();
+
+                    &:hover {
+                        background-color:$growthx-blue;
+                        color:#ffffff;
+                        border-color:$growthx-blue;
+                    }
                 }
             // }
         }

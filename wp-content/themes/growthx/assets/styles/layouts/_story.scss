@@ -76,6 +76,15 @@ body.single {
                 line-height: 1.7em;
                 font-size:1.4em;
             }
+            ol {
+                //@include make-lg-column(6);
+                clear: both;
+                float: none;
+                width: 60%;
+                margin: 20px auto;
+                line-height: 1.7em;
+                font-size:1.4em;
+            }
 
             .gallery-container {
                 height: 702px;

@@ -48,9 +48,17 @@ button, .btn-primary, .comment-form input[type=submit] {
     &.outline {
         background-color: transparent;
         border: 2px solid $growthx-dkgrey;
+        &:hover {
+            background-color:$growthx-blue;
+            color:#ffffff;
+            border-color:$growthx-blue;
+        }
     }
-    &:hover {
-
+    &:hover { 
+            background-color:$growthx-blue;
+            color:#ffffff;
+            border-color:$growthx-blue;
+            cursor:pointer;
     }
     a {
         &:hover{
@@ -172,7 +180,7 @@ blockquote {
     padding: 0;
     &.right {
             @include make-sm-column(6);
-            @include make-sm-column-offset(1);
+            @include make-sm-column-offset(3);
             padding-right: 40px;
 
             &:after {
@@ -335,7 +343,8 @@ blockquote {
             span {
                 display: block;
                 position: relative;
-                top: 44px;  
+                top: 0;  
+                font-size:1.3em;
                 color: $growthx-dkgrey;
             }
             input {
