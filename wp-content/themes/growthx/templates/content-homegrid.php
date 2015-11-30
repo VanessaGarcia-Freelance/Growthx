@@ -32,7 +32,7 @@ $headshots = array(
   ),
   6=> array (
     "name" => "Fynn Glover",
-    "company" => "RootsRates",
+    "company" => "RootsRated",
     "img" => "grid-6"
   ),
   7=> array (
@@ -151,7 +151,7 @@ $headshots = array(
   ),
   28=> array (
     "name" => "Abtin Hamidi",
-    "company" => "CargoChief",
+    "company" => "Cargo Chief",
     "img" => "grid-28"
   ),
   29=> array (
