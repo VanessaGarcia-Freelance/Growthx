@@ -281,16 +281,22 @@ body.blog {
                     }
 
                     .perfect-related_by-category {
-                        a {
-                            display: inline-block;
+                        a { 
                             letter-spacing:.05em;
                             text-transform:none;
+                        }
+                        span{
+                            display:inline-block;
+                            &.thumb-wrap{
+                                width: 70px;
+                                float: left !important;
+                                margin-right: 10px;
+                            }
                         }
                     }
 
                     img {
-                        float: left;
-                        margin-right: 10px;
+                        float: left; 
                     }
                 }
             }
