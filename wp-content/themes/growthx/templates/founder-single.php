@@ -21,8 +21,8 @@
 
 
     <div class="entry-content">
-      <?php printf($storyContent); ?>
-
+      <?php //printf($storyContent); ?>
+       <?php echo $storyContent; ?>
       <!-- <h4>Quotes</h4> -->
       <?php 
         //using a for loop for now. Will need to break these into individual blocks then insert them throughout the content.
