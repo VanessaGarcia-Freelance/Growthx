@@ -338,6 +338,12 @@ body.contact {
                     margin:0;
                     a{
                         text-transform:none;
+                        
+                        &:hover {
+                            background-color:$growthx-blue;
+                            color:#ffffff;
+                            border-color:$growthx-blue;
+                        }
                     }
                 }
             }
@@ -412,9 +418,9 @@ body.community {
             .col-wrap{
                 font-size:1.2em;
 
-               -webkit-column-count: 2;
-                  -moz-column-count: 2;
-                       column-count: 2;
+               -webkit-column-count: 1;
+                  -moz-column-count: 1;
+                       column-count: 1;
 
                -webkit-column-gap: 20px;
                   -moz-column-gap: 20px;

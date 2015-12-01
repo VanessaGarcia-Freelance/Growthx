@@ -260,9 +260,9 @@ body.blog {
             .posts{
                 font-size: 21px;
                 padding: 40px 40px 0 40px;
-                -webkit-column-count: 2;
-                  -moz-column-count: 2;
-                       column-count: 2;
+                -webkit-column-count: 1;
+                  -moz-column-count: 1;
+                       column-count: 1;
 
                -webkit-column-gap: 20px;
                   -moz-column-gap: 20px;
@@ -272,6 +272,9 @@ body.blog {
                     list-style-type: none;
                     padding: 20px 10px;
                     height: 150px;
+                    float:left;
+                    width:47%;
+                    margin-right:3%;
 
                     a {
                         color: $growthx-grey;
@@ -291,12 +294,15 @@ body.blog {
                                 width: 70px;
                                 float: left !important;
                                 margin-right: 10px;
+                                height:70px;
+                                background:#cccccc;
                             }
                         }
                     }
 
                     img {
                         float: left; 
+                        min-height:70px;
                     }
                 }
             }

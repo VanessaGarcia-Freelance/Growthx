@@ -76,7 +76,16 @@ body.single {
                 line-height: 1.7em;
                 font-size:1.4em;
             }
-            ol {
+            ol  {
+                //@include make-lg-column(6);
+                clear: both;
+                float: none;
+                width: 60%;
+                margin: 20px auto;
+                line-height: 1.7em;
+                font-size:1.4em;
+            }
+            ul  {
                 //@include make-lg-column(6);
                 clear: both;
                 float: none;
@@ -93,7 +102,7 @@ body.single {
 
                 .slide {
                     height: 702px;
-                    background-size: contain;
+                    background-size: cover;
 
                     > div {
                         height: 100%;
