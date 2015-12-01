@@ -2,12 +2,13 @@
   
   <?php if (has_post_thumbnail( $post->ID ) ): ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
-  
+  ?>
+  <?php endif; ?>
+  <?php 
     $quotes = types_child_posts("quote");
     $galleryImages = types_child_posts("gallery");
 
     ?>
-  <?php endif; ?>
 
 
   <article class="story">
@@ -77,7 +78,7 @@
     </div>
     <div class="share-bar container-fluid">
       <div class="row">
-      <?php echo do_shortcode( '[SSB_SHARE class_first="" class_second="" class_link="" class_icon="" layout="square" remove_inside="0" remove_counter="0"]' ); ?>
+      <?php echo do_shortcode( '[SSB_SHARE class_first="" class_second="" class_link="" class_icon="" layout="square" remove_inside="0" remove_counter="0"]' );  ?>
       </div>
     </div>
     
