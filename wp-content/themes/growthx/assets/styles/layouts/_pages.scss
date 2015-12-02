@@ -217,21 +217,21 @@ body.home {
         }
 
         .story-entry {
-            height: 648px;
+            height: 300px;
             background-size: cover;
             background-color: $growthx-green;
             background-blend-mode: multiply;
 
             .border {
                 display: table;
-                // width: 100%;
+                width: 100%;
 
                 >div {
                     display: table-cell;
                     vertical-align: middle;
                 }
                 h2 {
-                    font-size: 65px;
+                    font-size: 30px;
                     @include fontSemiBold();
                     a{
                         text-transform:none;
@@ -245,7 +245,7 @@ body.home {
                     }
                 }
                 h3{
-                    font-size: 39px;
+                    font-size: 18px;
                     a{
                         text-transform:none;
                     }
@@ -253,9 +253,11 @@ body.home {
                 .readmore {
                     a {
                         color: $growthx-ltgrey;
+                        font-size: 12px;
                         &:after {
-                             background: url(../images/white-arrow-right.png) no-repeat;
-                            background-size: 10px; 
+                            background: url(../images/white-arrow-right.png) no-repeat;
+                            background-size: 7px; 
+                            top: 6px;
                         }
                     }
                 }
@@ -486,6 +488,80 @@ body.careers{
                     width: 60%;
                 }
             }
+        }
+    }
+
+    body.home {
+        // .lastest-blog-posts {
+        //     margin-top: -3px;
+        //     // padding-bottom: 40px;
+
+        //     .featured-post {
+        //         border-bottom: 3px solid $growthx-grey;
+        //         background: url(../images/growthx-logo.svg) no-repeat 100% center;
+        //         background-size: contain;
+        //         padding-left: 0;
+
+        //         > div {
+        //             padding: 80px 0;
+        //         }
+
+        //         h2 {
+        //             font-size: 46px;
+        //             line-height: 55px;
+        //             a{
+        //                 text-transform:none;
+        //             }
+        //         }
+        //     }
+        //     .post-carousel {
+        //         padding: 80px 0;
+        //         h2 {
+        //             font-size: 32px;
+        //             line-height: 43px;
+        //             a{
+        //                 text-transform:none;
+        //             }
+        //         }
+        //     }
+        // }
+
+        .latest-founder-story {
+            color: $white;
+
+            .founder-carousel {
+                height: 100%;
+            }
+
+            .story-entry {
+                height: 648px;
+
+                .border {
+                    h2 {
+                        font-size: 65px;
+                        &:after {
+                            content: ' ';
+                            display:block;
+                            width: 23px;
+                            height: 3px;
+                            background-color: white;
+                        }
+                    }
+                    h3{
+                        font-size: 39px;
+                    }
+                    .readmore {
+                        a {
+                            color: $growthx-ltgrey;
+                            &:after {
+                                 background: url(../images/white-arrow-right.png) no-repeat;
+                                background-size: 10px; 
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
