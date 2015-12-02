@@ -117,7 +117,7 @@
         }
     }
     .page-header {
-        padding: 100px 0;
+        padding: 50px 0;
         border-bottom: 2px solid $growthx-dkgrey;
 
         > div {
@@ -170,6 +170,12 @@
         }
 
         
+    }
+
+    .community {
+        .page-header {
+            padding: 100px 0;
+        }
     }
 
 
