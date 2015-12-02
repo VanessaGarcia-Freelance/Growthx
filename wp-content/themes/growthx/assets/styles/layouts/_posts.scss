@@ -169,6 +169,7 @@ body.blog {
             position: absolute;
             margin-top: 40px;
             text-transform: uppercase;
+            display: none;
         }
         .meta {
             text-align: center;
@@ -341,6 +342,12 @@ body.blog {
                 }
             }
 
+        }
+
+        .meta-bar {
+            .back-to-blog {
+                display: block;
+            }
         }
     }
 
