@@ -70,14 +70,13 @@
         
         function resizeHeader () {
           var mgHeight = $('.membergrid').height() - 30;
-          console.log( 'height:', mgHeight );
+         // console.log( 'height:', mgHeight );
           
           $('.page-header, .page-header > div').height(mgHeight);
         }
         //$('.pageheader').height();
 
         $(window).load(function(){
-          console.log('loading page');
           resizeHeader();
           $(window).resize(function(){
             setTimout(function(){
