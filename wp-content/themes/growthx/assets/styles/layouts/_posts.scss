@@ -245,11 +245,11 @@ body.blog {
 
         .posts-container {
           
-            padding: 40px 0; 
+            padding: 0; 
 
             h2{
                text-align: center;
-               font-size: 34px;
+               font-size: 15px;
                // @include fontLight(); 
 
                &:before {
@@ -259,15 +259,16 @@ body.blog {
             
 
             .posts{
-                font-size: 21px;
+                font-size: 15px;
                 padding: 40px 40px 0 40px;
 
                 li {
                     list-style-type: none;
-                    padding: 20px 10px;
-                    height: 150px;
+                    padding: 20px 0;
+                    height: auto;
                     float:left;
                     margin-right:3%;
+                    
 
                     a {
                         color: $growthx-grey;
@@ -307,28 +308,40 @@ body.blog {
 
 @media screen and (min-width: 768px) {  
 
-     .related-posts {
+    .single {
 
-        .posts-container {
+        .related-posts {
 
-            .posts{
-                font-size: 21px;
-                padding: 40px 40px 0 40px;
-                -webkit-column-count: 1;
-                  -moz-column-count: 1;
-                       column-count: 1;
+            .posts-container {
+          
+                padding: 40px 0; 
 
-               -webkit-column-gap: 20px;
-                  -moz-column-gap: 20px;
-                       column-gap: 20px;
-
-                li {
-                    width:47%;
+                h2{
+                   text-align: center;
+                   font-size: 34px;
                 }
 
-            }
-        }
+                .posts{
+                    font-size: 21px;
+                    padding: 40px 40px 0 40px;
+                    -webkit-column-count: 1;
+                      -moz-column-count: 1;
+                           column-count: 1;
 
+                   -webkit-column-gap: 20px;
+                      -moz-column-gap: 20px;
+                           column-gap: 20px;
+
+                    li {
+                        width:47%;
+                        padding: 20px 10px;
+                        height: 150px;
+                    }
+
+                }
+            }
+
+        }
     }
 
 
