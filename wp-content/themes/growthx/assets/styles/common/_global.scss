@@ -423,7 +423,7 @@ blockquote {
 
     h2 {
         @include fontSemiBold();
-        font-size: 39px;
+        font-size: 13px;
         margin-bottom: 0;
         
         &:before {
@@ -487,4 +487,18 @@ blockquote {
         margin-bottom: 10px;
     }
     
+}
+
+
+@media screen and (min-width: 768px) { 
+    .newsletter-block {
+        h2 {
+            font-size: 39px;
+        }
+        h3 {
+            font-size: 21px;
+        }
+    }
+
+
 }

@@ -98,17 +98,17 @@ body.blog {
     .newsletter-block {
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 100px 0;
+        padding: 30px 0;
         color: $white;
         margin-top: 20px;
-        margin-left: -13.333333%;
-        width: 126%;
+        margin-left: -30px;
+        width: 123%;
         float:left;
         position: relative;
 
         h2 {
             @include fontSemiBold();
-            font-size: 39px;
+            font-size: 26px;
             margin-bottom: 0;
             
             &:before {
@@ -118,7 +118,7 @@ body.blog {
         }
         h3 {
             @include fontRegular();
-            font-size: 21px;
+            font-size: 18px;
             margin-top: 0;
         }
 
@@ -350,6 +350,23 @@ body.blog {
             }
         }
     }
+
+    body.blog {
+        .newsletter-block {
+            padding: 100px 0;
+            margin-left: -13.333333%;
+            width: 126%;
+
+            h2 {
+                font-size: 39px;
+            }
+            h3 {
+                font-size: 21px;
+            }
+        }
+    }
+
+
 
 
 }
