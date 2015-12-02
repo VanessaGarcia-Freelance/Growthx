@@ -127,12 +127,12 @@
 
                 <?php
                 $entry++;
+                $active = '';
               endif;
             ?>
            
 
           <?php 
-            $active = '';
             endwhile;
           ?>
           </div><!-- end carousel-inner -->
