@@ -24,17 +24,11 @@ footer {
         font-size: 1em;
     }
     .navbar-brand{
-        height: auto;
-        padding: 0;
-        float: none;
-        text-align: center;
-        display: block;
-        margin-top: -10px;
 
-        svg {
-            width: 51px;
-            fill: $growthx-blue;
-        }
+        display: none;
+    }
+    #menu-footer-menu, #menu-social-menu {
+        margin: 0;
     }
     
 
@@ -54,6 +48,20 @@ footer {
         } 
         .navbar-right {
             margin-right: 0;
+        }
+
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+            float: none;
+            text-align: center;
+            display: block;
+            margin-top: -10px;
+
+            svg {
+                width: 51px;
+                fill: $growthx-blue;
+            }
         }
     }
     

@@ -68,10 +68,11 @@ body.single {
 
         .entry-content {
             p {
-                //@include make-lg-column(6);
+                @include make-xs-column(10);
+                @include make-xs-column-offset(1);
                 clear: both;
                 float: none;
-                width: 60%;
+                // width: 60%;
                 margin: 20px auto;
                 line-height: 1.7em;
                 font-size:1.4em;
@@ -140,4 +141,27 @@ body.single {
             }
         }
     }
+}
+
+
+@media screen and (min-width: 768px) { 
+    body.single {
+
+        .story {
+
+            .entry-content {
+                p {
+                    width: 60%;
+                }
+            }
+        }
+
+
+    }
+
+
+
+
+
+
 }
