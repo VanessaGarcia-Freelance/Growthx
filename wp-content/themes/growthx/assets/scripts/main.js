@@ -309,7 +309,8 @@
           });
 
           $('.f-story').on('click', function(evt){
-            evt.stopPropagation();
+            //evt.stopPropagation();
+            evt.preventDefault();
           });
 
         });
