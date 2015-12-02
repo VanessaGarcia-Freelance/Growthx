@@ -165,6 +165,7 @@ body.blog {
         margin-bottom: 50px;
 
         .back-to-blog {
+            z-index: 10;
             position: absolute;
             margin-top: 40px;
             text-transform: uppercase;
@@ -260,20 +261,12 @@ body.blog {
             .posts{
                 font-size: 21px;
                 padding: 40px 40px 0 40px;
-                -webkit-column-count: 1;
-                  -moz-column-count: 1;
-                       column-count: 1;
-
-               -webkit-column-gap: 20px;
-                  -moz-column-gap: 20px;
-                       column-gap: 20px;
 
                 li {
                     list-style-type: none;
                     padding: 20px 10px;
                     height: 150px;
                     float:left;
-                    width:47%;
                     margin-right:3%;
 
                     a {
@@ -310,3 +303,34 @@ body.blog {
         
     }
 }
+
+
+@media screen and (min-width: 768px) {  
+
+     .related-posts {
+
+        .posts-container {
+
+            .posts{
+                font-size: 21px;
+                padding: 40px 40px 0 40px;
+                -webkit-column-count: 1;
+                  -moz-column-count: 1;
+                       column-count: 1;
+
+               -webkit-column-gap: 20px;
+                  -moz-column-gap: 20px;
+                       column-gap: 20px;
+
+                li {
+                    width:47%;
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
