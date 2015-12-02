@@ -6,12 +6,15 @@ body {
 
         nav.navbar {
             .navbar-toggle {
-                border-color: #ddd;
+                border-color: $growthx-grey;//#ddd;
+                padding: 9px 10px;
+                margin-top: 16px;
                 .icon-bar {
-                    background-color: #888;
+                    background-color: $growthx-grey;//#888;
                 }
             }
             .navbar-brand {
+                height: 62px;
                 svg {
                     fill: $growthx-blue;
                     width: 32px;
@@ -27,17 +30,18 @@ body {
                 cursor:pointer;
                 cursro:hand;
                 z-index:999999;
+
                 a {
-                    color: $white;
-                    opacity: 0.8;
+                    color: $black; 
                     text-transform: uppercase;
                     font-size: 1em;
                     padding: 15px;
                     @include fontSemiBold();
-                    
                     &:hover {
-                        opacity: 1;
+                        text-decoration: underline;
+
                     }
+                    
                 }
 
                 &.current-menu-item a {
@@ -53,7 +57,6 @@ body {
 @media screen and (min-width: 768px) { 
     
     body {
-
         > header {
             position: absolute;
 
@@ -65,14 +68,25 @@ body {
             nav.navbar {
                 margin-top: 10px;
                 .container-fluid {
-                    // padding-left: 0; 
-                    // padding-right: 0;
                     .navbar-header {
                         margin-left: 10px;
                     }
                     .navbar-brand {
                         margin-left: 0;
                     } 
+                }
+
+                li {
+                    a {
+                        color: $white;
+                        opacity: 0.8;
+                        &:hover {
+                            opacity: 1;
+                            text-decoration: none;
+
+                        }
+                    }
+
                 }
                      
             }
