@@ -6,7 +6,6 @@ body {
             p { 
                 clear: both;
                 float: none;
-                width: 60%;
                 margin: 20px auto;
                 line-height: 23px;
             }
@@ -473,6 +472,20 @@ body.careers{
     .page-header.border{
         div {
             border: 0px solid #f2f3f1; 
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {  
+    body {
+        .page-story{
+            .entry-content {
+                p { 
+                    width: 60%;
+                }
+            }
         }
     }
 }
