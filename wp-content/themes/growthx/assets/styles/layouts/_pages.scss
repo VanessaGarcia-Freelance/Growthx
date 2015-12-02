@@ -317,9 +317,8 @@ body.contact {
         border-bottom: 0px solid $growthx-dkgrey;
 
         .row {
+            margin-bottom: 20px;
             .address {
-                padding: 5% 0;
-
                 h2 {
                     @include fontSemiBold();
                     font-size: 39px;
@@ -347,21 +346,6 @@ body.contact {
                         }
                     }
                 }
-            }
-        }
-        .row:nth-child(even){
-            .address {
-                float: right;
-            }
-            .map {
-                float: left;
-                padding-right: 0;
-            }
-        }
-        .row:nth-child(odd){
-            .map {
-                padding-left:  0;
-                
             }
         }
     }
@@ -562,6 +546,41 @@ body.careers{
                 }
             }
 
+        }
+    }
+
+    body.contact {
+        .locations {
+            .row {
+                margin-bottom: 0px;
+                .address {
+                    padding: 5% 0;
+
+                    h2 {
+                        font-size: 39px; 
+                    }
+                    h3 {
+                        @include fontRegular();
+                        font-size: 21px;
+                        margin-top: 0;
+                    }
+                }
+            }
+            .row:nth-child(even){
+                .address {
+                    float: right;
+                }
+                .map {
+                    float: left;
+                    padding-right: 0;
+                }
+            }
+            .row:nth-child(odd){
+                .map {
+                    padding-left:  0;
+                    
+                }
+            }
         }
     }
 }
