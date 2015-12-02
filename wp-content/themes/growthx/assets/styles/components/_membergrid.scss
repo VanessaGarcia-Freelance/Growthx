@@ -1,5 +1,4 @@
 .membergrid {
-    min-height: 500px;
     //background-image: url('http://growthx1.wpengine.com/wp-content/uploads/2015/11/mosaic.png');
     //background-size: cover;
     // background-color: $growthx-grey;
@@ -168,4 +167,10 @@
 
         
     }
+}
+
+@media screen and (min-width: 768px) {  
+    min-height: 500px;
+
+
 }

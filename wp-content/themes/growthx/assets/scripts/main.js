@@ -69,19 +69,24 @@
         // JavaScript to be fired on the home page, after the init JS
         
         function resizeHeader () {
-          console.log('height');
-
-          var mgHeight = $('.membergrid').height() - 25;
-          console.log( 'height:',mgHeight );
+          var mgHeight = $('.membergrid').height() - 30;
+          console.log( 'height:', mgHeight );
           
-          $('.page-header').height(mgHeight);
+          $('.page-header, .page-header > div').height(mgHeight);
         }
         //$('.pageheader').height();
 
         $(window).load(function(){
+          console.log('loading page');
           resizeHeader();
+          $(window).resize(function(){
+            setTimout(function(){
+              resizeHeader();
+            }, 1000 );
+            
+          }); 
         });
-        $(window).resize(resizeHeader()); 
+        
 
       }
     },
