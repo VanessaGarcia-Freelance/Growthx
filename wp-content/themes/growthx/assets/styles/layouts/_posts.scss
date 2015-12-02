@@ -44,12 +44,10 @@ body.blog {
 
         article{
             // background-color: grey;
-            padding-top: 40px;
-            padding-bottom: 20px;
+            padding-top: 30px;
+            padding-bottom: 10px;
 
             &:first-child {
-                //@include make-sm-column(12);
-                //background-color: crimson;
             }
             &:nth-child(4n+6), 
             &:nth-child(4n+7), 
@@ -57,13 +55,11 @@ body.blog {
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
-                //background-color: green;
                 @include make-sm-column(4);
-                // border-bottom: 2px solid grey;
                 height: 100%
 
                 h2 {
-                   font-size:  30px;
+                   font-size:  22px;
                 }
 
                 .readmore {
@@ -76,10 +72,10 @@ body.blog {
                 @include make-sm-column(12);
                 padding-top: 30px;
                 h2 {
-                    font-size: 47px;
+                    font-size: 27px;
                 }
                 .readmore {
-                    font-size: 19px;
+                    font-size: 17px;
                 }
                 &:nth-child(even) {
                     &:before {
@@ -105,6 +101,7 @@ body.blog {
         width: 123%;
         float:left;
         position: relative;
+        margin-bottom: 30px;
 
         h2 {
             @include fontSemiBold();
@@ -356,12 +353,66 @@ body.blog {
             padding: 100px 0;
             margin-left: -13.333333%;
             width: 126%;
+            margin-bottom: 0;
 
             h2 {
                 font-size: 39px;
             }
             h3 {
                 font-size: 21px;
+            }
+        }
+
+         #main-content {
+            article{
+                padding-top: 40px;
+                padding-bottom: 20px;
+
+                &:first-child {
+                    //@include make-sm-column(12);
+                    //background-color: crimson;
+                }
+                &:nth-child(4n+6), 
+                &:nth-child(4n+7), 
+                &:nth-child(4n+8),
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    //background-color: green;
+                    @include make-sm-column(4);
+                    // border-bottom: 2px solid grey;
+                    height: 100%
+
+                    h2 {
+                       font-size:  30px;
+                    }
+
+                    .readmore {
+                        font-size: 17px;
+                    }
+                }
+                &:nth-child(5n+9),
+                &:nth-child(4) {
+                    //background-color: green;
+                    @include make-sm-column(12);
+                    padding-top: 30px;
+                    h2 {
+                        font-size: 47px;
+                    }
+                    .readmore {
+                        font-size: 19px;
+                    }
+                    &:nth-child(even) {
+                        &:before {
+                           @include accentblock($growthx-blue); 
+                        }
+                    }
+                    &:nth-child(odd) {
+                        &:before {
+                           @include accentblock($growthx-green); 
+                        }
+                    }
+                }
             }
         }
     }
