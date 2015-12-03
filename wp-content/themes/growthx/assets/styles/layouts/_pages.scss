@@ -345,6 +345,13 @@ body.contact {
                             border-color:$growthx-blue;
                         }
                     }
+                    button{
+                        &:hover {
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
                 }
             }
         }
