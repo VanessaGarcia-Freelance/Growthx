@@ -186,6 +186,11 @@ body.blog {
         }
     }
 
+    figure {
+        .inset-border {
+            display: none;
+        }
+    }
     .wp-caption {
         display: block;
         padding: 4px;
@@ -195,7 +200,7 @@ body.blog {
         line-height: 1.428571429;
         background-color: #fff;
         border: 0;
-        font-size: 30px;
+        font-size: 20px;
         border-radius: 4px;
         -webkit-transition: border .2s ease-in-out;
         -o-transition: border .2s ease-in-out;
@@ -207,11 +212,13 @@ body.blog {
                 padding: 9px;
                 position: absolute;
                 top: 20%;
-                left: 70px;
+                left: 10%;
                 color: #ffffff;
-                width: 40%;
+                width: 70%;
                 text-align: left;
                 @include fontSemiBold();
+                font-size: 15px;
+                line-height: 17px;
             }
         }
 
@@ -345,6 +352,22 @@ body.blog {
             .back-to-blog {
                 display: block;
             }
+        }
+         figure {
+        .inset-border {
+                display: block;
+            }
+        }
+        .wp-caption {
+            font-size: 30px;
+             &.alignnone{
+                .wp-caption-text {
+                    width: 40%;
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+
         }
     }
 

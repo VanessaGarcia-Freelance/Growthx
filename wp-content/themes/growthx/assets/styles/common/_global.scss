@@ -175,8 +175,8 @@ nav.navmenu {
 
 blockquote {
     border: none;
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 15px;
+    line-height: 25px;
     padding: 0;
     &.right {
             @include make-sm-column(6);
@@ -213,7 +213,7 @@ blockquote {
              margin: 40px auto;
             max-width: 1170px;
             position: relative;
-            width: 60%;
+            width: 80%;
             padding-right: 50px;
 
             &:after {
@@ -232,7 +232,7 @@ blockquote {
              margin: 40px auto;
             max-width: 1170px;
             position: relative;
-            width: 60%;
+            width: 80%;
             padding-left: 50px;
 
             &:before {
@@ -507,6 +507,15 @@ blockquote {
         h3 {
             font-size: 21px;
         }
+    }
+
+    blockquote {
+        font-size: 23px;
+        line-height: 31px;
+        &.border-right, &.border-left {
+            width: 60%; 
+        }
+        
     }
 
 

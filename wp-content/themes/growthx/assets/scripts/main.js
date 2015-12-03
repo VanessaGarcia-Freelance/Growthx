@@ -148,8 +148,13 @@
             wpcaption = $('.wp-caption'),
             quotes = $('.quote'),
             skip = Math.round(paragraphs.length / quotes.length),
-            gallery = $('.gallery-container');
-        //console.log( 'skip:', skip );
+            gallery = $('.gallery-container'),
+            figure = $('figure');
+
+        //super hacky but don't have time to figure out the way this was done. Visably good solve for now
+        if((figure) && ($(window).width() < 768)) {
+          $(figure).width('95%');
+        }
 
         if(gallery) {
           var galplacement = Math.floor(paragraphs.length / 2);
