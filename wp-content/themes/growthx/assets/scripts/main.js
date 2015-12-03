@@ -129,11 +129,13 @@
 
       }
     },
-    'blog': {
+    'news': {
       init: function() { 
       },
       finalize: function () {
         var article = $('article');
+        console.log( 'aricle 3:', article );
+        console.log( 'news:', $('.newsletter-block') );
         $('.newsletter-block').insertAfter(article[3]);
       }
     },
