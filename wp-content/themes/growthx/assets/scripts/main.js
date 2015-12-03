@@ -294,7 +294,7 @@
         $(window).load(function(){
           $('.member.bio-modal').on('click', function(evt){
             evt.preventDefault();
-            console.log( 'show bio - id:', $(this).attr('href') );
+            console.log( 'show bio - id:', $(this).attr('data-url') );
             var memberId = $(this).attr('data-url');
 
             $.ajax({
