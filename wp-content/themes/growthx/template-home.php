@@ -50,20 +50,6 @@
             $active = '';
             endwhile;
           ?>
-
-      <!-- disabling recent posts for GrowthX Founder story -->
-      <?php
-          /*$args = array( 'numberposts' => '1', 'orderby' => 'post_date',
-    'order' => 'ASC' );
-          $recent_posts = wp_get_recent_posts( $args );
-          foreach( $recent_posts as $recent ){
-              echo '<div class="col-sm-7">';
-              //echo '<img src="#" />';
-              echo '<h2><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></h2> ';
-              echo '<p class="readmore"><a href="' . get_permalink($recent["ID"]) . '">Read Our Blog</a></p>';
-              echo '</div>';
-          }*/
-      ?>
     </div>
 
     <div class="post-carousel col-sm-offset-1 col-sm-10">
@@ -74,7 +60,7 @@
               echo '<div class="col-sm-4">';
               //echo '<img src="#" />';
               echo '<h2><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></h2> ';
-              echo '<p class="readmore"><a href="' . get_permalink($recent["ID"]) . '">Read Our Blog</a></p>';
+              echo '<p class="readmore"><a href="' . get_permalink($recent["ID"]) . '">Read More</a></p>';
               echo '</div>';
           }
       ?>
