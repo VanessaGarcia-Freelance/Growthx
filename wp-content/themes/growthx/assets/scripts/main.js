@@ -44,19 +44,19 @@
           },
           w768 : {
             rows : 4,
-            columns : 5
+            columns : 8
           },
           w480 : {
-            rows : 4,
+            rows : 8,
             columns : 4
           },
           w320 : {
-            rows : 4,
+            rows : 8,
             columns : 4
           },
           w240 : {
-            rows : 4,
-            columns : 3
+            rows : 8,
+            columns : 4
           },
           animType : 'fadeInOut',
           // animation easings
@@ -241,7 +241,7 @@
 
           modal.show();
           $('.overlay').show();
-          $('.close', modal).on('click', function (){
+          $('.close', modal).on('click touchstart', function (){
             $(modal).hide();
             $('.overlay').hide();
           });
@@ -292,7 +292,8 @@
 
         //wouldn't work unless I wrapped it in an load function.
         $(window).load(function(){
-          $('.member.bio-modal').on('click', function(evt){
+          $('.member.bio-modal').on('click touchstart', function (evt){
+            console.log('click touchstart no');
             evt.preventDefault();
             console.log( 'show bio - id:', $(this).attr('data-url') );
             var memberId = $(this).attr('data-url');
@@ -313,12 +314,18 @@
 
           });
 
-          $('.f-story').on('click', function(evt){
+          $('.f-story').on('click touchstart', function (evt){
+            evt.stopPropagation();
+            // evt.preventDefault();
+          });
+          $('.bio-link').on('click touchstart', function (evt){
             //evt.stopPropagation();
             evt.preventDefault();
-          });
+        });
+          
 
         });
+        
       }
     }
   };

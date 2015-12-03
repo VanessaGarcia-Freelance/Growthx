@@ -14,7 +14,7 @@
       $fieldArray = array( "user_id" => $recent["ID"] );
       $headshot = types_render_field( "headshot", array( "url" => "true", "proportional" => "true" ) );
       $parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'growthx-company');
-      $targetUrl = '#';//get_the_ID(); //get_permalink(); 
+      $targetUrl = '';//get_the_ID(); //get_permalink(); 
       $memberId = get_the_ID(); //'bio-modal';
 
       if(!empty($parent_id)) {
@@ -37,7 +37,7 @@
               $parent_url = get_permalink($parent_id); ?>
             <p class="f-story">Founder Story</p>
           <?php else: ?>
-            <p class="f-story">Bio</p>
+            <p class="bio-link">Bio</p>
           <?php endif; ?>
         </div>
       </a>
