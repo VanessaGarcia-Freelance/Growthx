@@ -1,6 +1,9 @@
 .page-header {
     margin: 0;
     background-size: contain;
+    height: 383px;
+    color: $white;
+    background-color: $growthx-grey;
 
     &.bgImg {
         color: $white;
@@ -69,10 +72,14 @@
         z-index: 100;
         width: 100%;
         border-bottom: 0;
+        padding: 10px;
+        height: 100%;
         
         > div {
             @include make-sm-column(12);
-            @include make-sm-column-offset(0); 
+            @include make-sm-column-offset(0);
+            border: 5px solid $growthx-ltgrey;
+            height: 100%; 
         }
 
         h1, h2 {
@@ -119,6 +126,8 @@
     .page-header {
         padding: 50px 0;
         border-bottom: 2px solid $growthx-dkgrey;
+        color: $black;
+        background-color: transparent;
 
         > div {
             border: none;
@@ -175,6 +184,8 @@
     .community {
         .page-header {
             padding: 100px 0;
+            height: auto;
+            min-height: 383px;
         }
     }
 

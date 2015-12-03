@@ -18,7 +18,7 @@
   
 ?>
 
-<div class="page-header container-fluid border <?php echo $bgimg; ?>" style="background-image: url(<?php printf($pageHeaderImage); ?>)">
+<div class="page-header container-fluid <?php echo $bgimg; ?>" style="background-image: url(<?php printf($pageHeaderImage); ?>)">
   <!-- <h1><?= Titles\title(); ?></h1> -->
   <div>
     <div class="heading-content">
