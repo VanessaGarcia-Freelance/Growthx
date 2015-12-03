@@ -76,6 +76,9 @@ body.single {
                 margin: 20px auto;
                 line-height: 1.7em;
                 font-size:1.4em;
+                a{
+                    text-transform: none;
+                }
             }
             ol  {
                 //@include make-lg-column(6);
