@@ -5,7 +5,7 @@
 
   <ul>
   <?php 
-      $args = array( 'post_type' => 'member', 'posts_per_page' => -1, 'post_status' => 'published' );
+      $args = array( 'post_type' => 'member', 'posts_per_page' => -1, 'post_status' => 'publish' );
       //Define the loop based on arguments
     $loop = new WP_Query( $args );
      
