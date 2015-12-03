@@ -74,6 +74,7 @@
         border-bottom: 0;
         padding: 10px;
         height: 100%;
+        background-color: transparent;
         
         > div {
             @include make-sm-column(12);
@@ -128,6 +129,8 @@
         border-bottom: 2px solid $growthx-dkgrey;
         color: $black;
         background-color: transparent;
+        height: auto;
+        min-height: 383px;
 
         > div {
             border: none;
