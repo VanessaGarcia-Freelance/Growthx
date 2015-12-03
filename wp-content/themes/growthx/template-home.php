@@ -19,7 +19,7 @@
 
             <?php 
               //grab all posts
-              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => -1 );
+              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => -1, 'post_status' => 'publish' );
 
               //Define the loop based on arguments
               $loop = new WP_Query( $args );
@@ -78,7 +78,7 @@
 
             <?php 
               //grab all posts
-              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => -1 );
+              $args = array( 'post_type' => 'growthx-company', 'posts_per_page' => -1, 'post_status' => 'publish' );
 
               //Define the loop based on arguments
               $loop = new WP_Query( $args );
@@ -98,7 +98,7 @@
                 
                 <!-- create a new slide -->
                  <div class="item <?php echo $active; ?>">
-                  <div class="story-entry " style="background-image: url( <?php printf($headerImage);  ?> );">
+                  <div class="story-entry " style="background-image: url( <?php printf($headerImage); ?> );">
                     <div class="col-sm-12 border">
                       <div> 
                         <div class="col-sm-5 col-sm-offset-6">
