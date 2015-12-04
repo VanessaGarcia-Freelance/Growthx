@@ -228,12 +228,12 @@
             columns : 3
           },
           animType : 'fadeInOut',
-          preventClick    : false,
+          preventClick    : true,
         } );
 
       },
       finalize: function() {
-        // console.log('community');
+        console.log('community test1');
         // console.log( 'templateDir:', templateDir );
         var phpRequest = templateDir + '/memberinfo.php';
 
@@ -292,11 +292,14 @@
         }
 
 
+
         //wouldn't work unless I wrapped it in an load function.
         $(window).load(function(){
-          $('.member.bio-modal').on('click touchstart', function (evt){
+          
+          $('.membergrid a').on('click touchend', function (evt){
             console.log('click touchstart no');
             evt.preventDefault();
+            // evt.stopPropagation();
             console.log( 'show bio - id:', $(this).attr('data-url') );
             var memberId = $(this).attr('data-url');
 
@@ -316,14 +319,10 @@
 
           });
 
-          $('.f-story').on('click touchstart', function (evt){
+          $('.f-story').on('click touchend', function (evt){
             evt.stopPropagation();
-            // evt.preventDefault();
           });
-          $('.bio-link').on('click touchstart', function (evt){
-            //evt.stopPropagation();
-            evt.preventDefault();
-        });
+
           
 
         });
