@@ -104,6 +104,11 @@
 
         function toggleForm(currentModal) {
           console.log( 'currentModal:', currentModal  );
+          var top = $(document).scrollTop();
+          top = top + 20;
+          console.log( 'top:', top );
+          $(currentModal).css({ top: top+'px' });
+
           $(currentModal).show();
           $('.overlay').show();
           $('.close', currentModal).on('click', function (){
