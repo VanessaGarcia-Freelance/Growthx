@@ -27,7 +27,7 @@
       }
     ?>
     <li>
-      <a class="member bio-modal" data-url="<?php echo $memberId; ?>" href="<?php echo $targetUrl; ?>">
+      <a class="member <?php if (empty($founderStory)){ ?>bio-modal<?php }else{ ?>f-story <?php } ?>" data-url="<?php echo $memberId; ?>" href="<?php echo $targetUrl; ?>">
         <img src="<?php printf($headshot);  ?>"/>
         <div class="text">
 

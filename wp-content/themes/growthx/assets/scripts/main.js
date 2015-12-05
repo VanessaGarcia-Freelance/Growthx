@@ -301,7 +301,7 @@
         //wouldn't work unless I wrapped it in an load function.
         $(window).load(function(){
           
-          $('.membergrid a').on('click touchend', function (evt){
+          $('.membergrid a.bio-modal').on('click touchend', function (evt){
             console.log('click touchstart no');
             evt.preventDefault();
             // evt.stopPropagation();
@@ -325,6 +325,7 @@
           });
 
           $('.f-story').on('click touchend', function (evt){
+            window.location = $(this).attr("href");
             evt.stopPropagation();
           });
 
