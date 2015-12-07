@@ -300,6 +300,25 @@
 
         //wouldn't work unless I wrapped it in an load function.
         $(window).load(function(){
+          $('.grid-filters button').on('click touchend', function (evt){
+             var datafilter= '.membergrid li.' + $(this).data('filter');
+             var datanot = '.membergrid li:not(.'+ $(this).data('filter')+')';
+             $('.grid-filters button').removeClass('current');
+             $(this).addClass('current');
+             //$('.membergrid li').fadeOut(500);
+              var cssObj = {'opacity' : '0.3'};
+               $(datanot).animate(cssObj, 800, function() {
+                  // Animation complete.
+                });
+              // setTimeout(function(){ $(datafilter).fadeIn(500); }, 500);
+
+              cssObj = {'opacity' : '1'};
+             //$(datafilter).fadeIn(500); 
+               $(datafilter).animate(cssObj, 800, function() {
+                  // Animation complete.
+                });
+          });
+
           
           $('.membergrid a.bio-modal').on('click touchend', function (evt){
             console.log('click touchstart no');

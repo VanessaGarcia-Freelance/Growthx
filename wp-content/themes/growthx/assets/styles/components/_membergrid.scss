@@ -1,3 +1,15 @@
+.grid-filters{
+    margin: 30px 0 0;
+    text-align: center;
+    button{
+        margin:0 20px 0 0;
+        &.current{
+            background-color: #2d2d2d;
+            color:  #ffffff;
+        }
+    }
+}
+
 .membergrid {
     //background-image: url('http://growthx1.wpengine.com/wp-content/uploads/2015/11/mosaic.png');
     //background-size: cover;
